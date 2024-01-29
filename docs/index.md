@@ -7,4 +7,4 @@ title: Welcome to my blog
 
 What _is_ this all about, you ask?
 
-{% include ga-tag.html %}
+{% # include ga-tag.html %}
