@@ -10,9 +10,9 @@ These days in tech, it feels like layoffs are the new pandemic overhiring. I don
 
 I think it would be fair to call it tech-adjacent. The New Year confetti had hardly settled when the email message[^1] landed in my inbox first thing in the morning on Thursday, January 11, 2024 (a.k.a. Judgment Day):
 
-> _Effective immediately, your role as Learning Experience Designer for Adult Programs at Canada Learning Code no longer exists. You will be locked out of your company accounts at the end of the work day.
+[^1]: _This is paraphrased as I (foolishly) did not send myself a copy of the email message._
 
-[^*]: _This is paraphrased as I (foolishly) did not send myself a copy of the email message._
+> _Effective immediately, your role as Learning Experience Designer for Adult Programs at Canada Learning Code no longer exists. You will be locked out of your company accounts at the end of the work day.
 
 I wasn't the only one affected by this: across the organisation, short meetings titled "Your role at CLC" were popped into calendars for those of us that were being laid off. These were perfunctory engagements that were followed up with an official termination letter that detailed, among other things, what we should expect in terms of statutory (i.e., legally mandated) compensation as well as what additional severance was being offered-- standard layoff stuff, I imagine.
 
