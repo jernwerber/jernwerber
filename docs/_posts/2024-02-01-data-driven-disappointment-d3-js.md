@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Data-Driven Disappointment: Looking at the 2024 Canada Learning Code Layoffs with D3 (d3.js)"
+categories: [ D3, d3js, layoff, CLC, Canada Learning Code ]
 ---
 
 _Note: This post is currently under construction._
