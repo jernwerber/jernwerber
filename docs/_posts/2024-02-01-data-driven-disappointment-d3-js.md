@@ -8,9 +8,9 @@ These days in tech, it feels like layoffs are the new pandemic overhiring. I don
 
 > _[bring] accessible computer science to communities across Canada so everyone can create with technology_
 
-I think it would be fair to call it tech-adjacent. The New Year confetti had hardly settled when the email message landed in my inbox first thing in the morning on Thursday, January 11, 2024 (a.k.a. Judgment Day):
+I think it would be fair to call it tech-adjacent. The New Year confetti had hardly settled when the email message[^1] landed in my inbox first thing in the morning on Thursday, January 11, 2024 (a.k.a. Judgment Day):
 
-> _Effective immediately, your role as Learning Experience Designer for Adult Programs at Canada Learning Code no longer exists. You will be locked out of your company accounts at the end of the work day._[^1]
+> _Effective immediately, your role as Learning Experience Designer for Adult Programs at Canada Learning Code no longer exists. You will be locked out of your company accounts at the end of the work day.
 
 [^*]: _This is paraphrased as I (foolishly) did not send myself a copy of the email message._
 
@@ -26,13 +26,13 @@ I think part of how I deal with upsetting or unsavoury occurrences like this is 
 
 ## What data will we use?
 
-The main constraint for data is that it has to be publicly available. Being a registered Canadian not-for-profit and charity, there is actually a lot of information that can be accessed by way of the organisation's annual statutory filing, the _T3010 Registered Charity Information Return_. I don't need to go that far to find what I want: the information that I want can be found on Canada Learning Code's own website at the bottom of the Our Team page (https://www.canadalearningcode.ca/our-team/). 
+The main constraint for data is that it has to be publicly available. Being a registered Canadian not-for-profit and charity, there is actually a lot of information that can be accessed by way of the organisation's annual statutory filing, the _T3010 Registered Charity Information Return_. I don't need to go that far to find what I want: the information that I want can be found on Canada Learning Code's own website at the bottom of the [_Our Team_ page (https://www.canadalearningcode.ca/our-team/)](https://www.canadalearningcode.ca/our-team/). 
 
 ### The plan
 
 The plan is simple and easily reproducible:
 
-1. Grab a historic version of the Our Team page from the Internet Archive from some 1. time around Judgment Day but before the webpage was updated.
+1. Grab a historic version of the Our Team page from the Internet Archive's [WayBack Machine (https://web.archive.org/)](https://web.archive.org/) from some 1. time around Judgment Day but before the webpage was updated.
 1. Grab an up-to-date or updated version of the Our Team page.
 1. Tabulate the roles of the people listed for the HQ Team.
 1. Cross-reference the people listed for the HQ Team between page versions: If they aren't present in the updated version, they're likely (enough) to have been laid off. Flag these people.
@@ -54,7 +54,7 @@ There are few enough folks that I will do this manually, though it would probabl
 
 ## What is D3 (and D3.js)?
 
-[D3 (https://d3js.org)](https://d3js.org), short for _Data-Driven Documents_, is a JavaScript library that is used for data visualisation. The "_Documents_" of D3 refer to the document object model (DOM) of a webpage, with which this library interacts. From D3's own website page (_"What is D3?"_, [https://d3js.org/what-is-d3](https://d3js.org/what-is-d3):
+[D3 (https://d3js.org)](https://d3js.org), short for _Data-Driven Documents_, is a JavaScript library that is used for data visualisation. The "_Documents_" of D3 refer to the [document object model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) of a webpage, with which this library interacts. From D3's own website page (_"What is D3?"_, [https://d3js.org/what-is-d3](https://d3js.org/what-is-d3):
 
 > _D3 is not a charting library in the traditional sense. It has no concept of "charts". When you visualize data with D3, you compose a variety of primitives.
 …
