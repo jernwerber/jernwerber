@@ -2,7 +2,9 @@
 title: "Data-Driven Disappointment: Looking at the 2024 Canada Learning Code Layoffs with D3 (d3.js)"
 ---
 
-_Note: This post is currently under construction._
+_Note: This post is currently under construction. Any questions can be directed to jon.weber@gmail.com and I might or might not respond._
+
+![Meme of the scene from Mean Girls where Regina George (played by Rachel McAdams) calls out to Cady Heron (played by Lindsay Lohan) and says "Get in loser, we're going shopping!", but with a new caption that reads "Get in loser, we're doing layoffs!"](/docs/assets/img/get-in-loser-clc-meme.png)
 
 These days in tech, it feels like layoffs are the new pandemic overhiring. I don't consider [Canada Learning Code]("https://canadalearningcode.ca") to be a tech company, but, as a company whose mission is to
 
