@@ -70,11 +70,11 @@ As a JavaScript library, you can use a `<script>` tag to pull it in from a JavaS
 
 [^3]: D3 also plays nice with other popular frameworks such as React and Svelte. Check out their [Getting Started page](https://d3js.org/getting-started) for more details on the different ways you can use D3.
 
-``` js
+```html
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 ```
 
-From there, we can start using the different D3 components on our page throught the `d3.` object/namespace.
+From there, we can start using the different D3 components on our page throught the `d3` object/namespace.
 
 ### Loading the data
 
@@ -92,8 +92,8 @@ Copying and pasting the data into an IDE yields the following string, which I'm 
 
     <summary>Show data table</summary>
 
-``` js
 
+```js
 const rawData = `Role	LaidOff	Functional	Hierarchy
 Chief Executive Officer	FALSE		4
 Chief Strategy & People Officer	FALSE		3
@@ -139,6 +139,7 @@ Partnerships Coordinator	TRUE		0
 Marketing Coordinator	FALSE	MARCOM	0
 `
 ```
+
 
 </details>
 
