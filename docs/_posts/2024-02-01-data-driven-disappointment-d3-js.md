@@ -68,7 +68,7 @@ Sounds _perfect_.
 
 As a JavaScript library, you can use a `<script>` tag to pull it in from a JavaScript CDN like `jsdelivr.net` which is what I will be doing [^3]:
 
-[^3] D3 also plays nice with other popular frameworks such as React and Svelte. Check out their [Getting Started page](https://d3js.org/getting-started) for more details on the different ways you can use D3.
+[^3]: D3 also plays nice with other popular frameworks such as React and Svelte. Check out their [Getting Started page](https://d3js.org/getting-started) for more details on the different ways you can use D3.
 
 ```js
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -82,13 +82,16 @@ __Did you know that if you drag-select and copy cells from Google Sheets, they w
 
 | Role | LaidOff | Functional | Hierarchy |
 | ---- | ------- | ---------- | --------- |
-| `string`, role title/name as written on website | `bool`-ish [^4], `"TRUE"` if the role disappeared between updates otherwise `"FALSE"`   `string`, The role's functional unit that's been inferred from the role title, e.g. `MARCOM`, `HR`, `FUND`, etc.
+| `string`, role title/name as written on website | `bool`-ish [^4], `"TRUE"` if the role disappeared between updates otherwise `"FALSE"` | `string`, The role's functional unit that's been inferred from the role title, e.g. `MARCOM`, `HR`, `FUND`, etc.
 | `int`, value from `0` to `4` codifying the role's relative position in the organisation's control structure. |
+
+[^4]: `bool`_-ish_ because it's a string that has the vale of `"TRUE"` or `"FALSE"` but not a true `bool` as of writing.
 
 <details>
     <summary>
     Copying and pasting the data into an IDE yields the following string, which I'm assigning to a variable, `rawData`.
     </summary>
+
 
 ```js
 const rawData = `Role	LaidOff	Functional	Hierarchy
@@ -139,7 +142,7 @@ Marketing Coordinator	FALSE	MARCOM	0
 
 </details>
 
-[^4]: `bool`_-ish_ because it's a string that has the vale of `"TRUE"` or `"FALSE"` but not a true `bool` as of writing.
+
 
 ---
 
