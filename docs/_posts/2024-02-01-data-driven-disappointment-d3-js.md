@@ -78,22 +78,22 @@ From there, we can start using the different D3 components on our page throught 
 
 ### Loading the data
 
-__Did you know that if you drag-select and copy cells from Google Sheets, they will be pasted as a tab-separated values (`tsv`) string?__ I've gathered the data that I'll be working with as detailed above and I've staged it in a Google Sheets document structured as follows:
+__Did you know that if you drag-select and copy cells from Google Sheets, they will be pasted as a tab-separated values (tsv) string?__ I've gathered the data that I'll be working with as detailed above and I've staged it in a Google Sheets document structured as follows:
 
 | Role | LaidOff | Functional | Hierarchy |
 | ---- | ------- | ---------- | --------- |
-| `string`, role title/name as written on website | `bool`-ish [^4], `"TRUE"` if the role disappeared between updates otherwise `"FALSE"` | `string`, The role's functional unit that's been inferred from the role title, e.g. `MARCOM`, `HR`, `FUND`, etc.
-| `int`, value from `0` to `4` codifying the role's relative position in the organisation's control structure. |
+| `string`, role title/name as written on website | `bool`-ish [^4], `"TRUE"` if the role disappeared between updates otherwise `"FALSE"` | `string`, The role's functional unit that's been inferred from the role title, e.g. `MARCOM`, `HR`, `FUND`, etc. | `int`, value from `0` to `4` codifying the role's relative position in the organisation's control structure. |
 
 [^4]: `bool`_-ish_ because it's a string that has the vale of `"TRUE"` or `"FALSE"` but not a true `bool` as of writing.
 
-<details>
-    <summary>
-    Copying and pasting the data into an IDE yields the following string, which I'm assigning to a variable, `rawData`.
-    </summary>
+Copying and pasting the data into an IDE yields the following string, which I'm assigning to a variable, `rawData`.
 
+<details>
+
+    <summary>Show data table</summary>
 
 ```js
+
 const rawData = `Role	LaidOff	Functional	Hierarchy
 Chief Executive Officer	FALSE		4
 Chief Strategy & People Officer	FALSE		3
