@@ -2,5 +2,5 @@ theme: minima
 title: "jernwerber.dev: words and code"
 author: "jernwerber"
 description: "Selected works of Jonthan Weber (@jernwerber) with some bonus words and code."
-markdown: kramdown
+markdown: gfm
 google_analytics: G-VVEDYZ776Q

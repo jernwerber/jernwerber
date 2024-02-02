@@ -88,7 +88,7 @@ __Did you know that if you drag-select and copy cells from Google Sheets, they w
 
 Copying and pasting the data into an IDE yields the following string, which I'm assigning to a variable, `rawData`.
 
-<details><summary>Show data table</summary>
+<details><summary>Show data string</summary>
 <div markdown="1">
 ```js
 const rawData = `Role	LaidOff	Functional	Hierarchy
@@ -133,8 +133,7 @@ Accountant	FALSE	FIN	0
 People and Culture Coordinator	TRUE	HR	0
 Data Analyst	TRUE	EVAL	0
 Partnerships Coordinator	TRUE		0
-Marketing Coordinator	FALSE	MARCOM	0
-`
+Marketing Coordinator	FALSE	MARCOM	0`
 ```
 </div>
 </details>
