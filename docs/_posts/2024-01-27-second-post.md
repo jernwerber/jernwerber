@@ -1,5 +1,6 @@
 ---
 title: Second post
+published: false
 ---
 
 ## Another post?
