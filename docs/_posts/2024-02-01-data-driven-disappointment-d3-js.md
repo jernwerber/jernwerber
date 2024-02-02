@@ -88,9 +88,8 @@ __Did you know that if you drag-select and copy cells from Google Sheets, they w
 
 Copying and pasting the data into an IDE yields the following string, which I'm assigning to a variable, `rawData`.
 
-<details>
+<details><summary>Show data table</summary>
 
-    <summary>Show data table</summary>
 
 
 ```js
@@ -146,4 +145,5 @@ Marketing Coordinator	FALSE	MARCOM	0
 
 
 ---
+
 
