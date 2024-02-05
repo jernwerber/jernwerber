@@ -6,9 +6,9 @@ title: "Data-Driven Disappointment Part 2: Getting set up and getting started"
 
 [D3 (https://d3js.org)](https://d3js.org), short for _Data-Driven Documents_, is a JavaScript library that is used for data visualisation. The "_Documents_" of D3 refer to the [document object model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) of a webpage, with which this library interacts. From D3's own website page (_"What is D3?"_, [https://d3js.org/what-is-d3](https://d3js.org/what-is-d3):
 
-> _D3 is not a charting library in the traditional sense. It has no concept of "charts". When you visualize data with D3, you compose a variety of primitives.
-…
-D3 makes things possible, not necessarily easy; even simple things that should be easy are often not. To paraphrase Amanda Cox: "Use D3 if you think it's perfectly normal to write a hundred lines of code for a bar chart."_
+> _D3 is not a charting library in the traditional sense. It has no concept of "charts". When you visualize data with D3, you compose a variety of primitives._
+> …
+> _D3 makes things possible, not necessarily easy; even simple things that should be easy are often not. To paraphrase Amanda Cox: "Use D3 if you think it's perfectly normal to write a hundred lines of code for a bar chart."_
 
 Sounds _perfect_.
 
@@ -136,6 +136,16 @@ const data = d3.tsvParse(rawData);
 // ]
 ```
 
+## Our first (pie) chart
 
+{% include "d3-js-example-simple.html" %}
+
+From here, we can begin to use (some of) the rest of D3's functionality to explore the data. The "100 lines of code" is, in this case, a bit of an exaggeration, but it's true that there's more than a little bit of setup and preparation necessary to make even a simple chart. Let's take a pie chart[^6], for example:
+
+[^6]: A pie chart is a way of representing fractions or proportions, with each group carving out a certain amount of "chart angle" (pie slice) based on its size relative to other groups.
+
+- A pie chart is made of slices. In D3, a pie slice (or circle fraction) is called an `arc`.
+- An `arc` is defined by an `innerRadius`, an `outerRadius`, a `startAngle`, and a `stopAngle`.
+- It would be a hassle to have to determine these ourselves, but D3 has a pie generator, `d3.pie()` which can calculate the appropriate values for `startAngle` and `stopAngle` based on data that we provide.
 
 ---
