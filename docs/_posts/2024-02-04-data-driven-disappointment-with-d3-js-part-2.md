@@ -1,32 +1,18 @@
 ---
-title: "Data-Driven Disappointment: Looking at the 2024 Canada Learning Code Layoffs with D3 (d3.js)"
+title: "Data-Driven Disappointment Part 2: Getting set up and getting started"
 ---
 
-_Note: This post is currently under construction. Any questions can be directed to jon.weber@gmail.com and I might or might not respond._
+## What is D3 (and D3.js)?
 
-![Meme of the scene from Mean Girls where Regina George (played by Rachel McAdams) calls out to Cady Heron (played by Lindsay Lohan) and says "Get in loser, we're going shopping!", but with a new caption that reads "Get in loser, we're doing layoffs!"](/assets/img/get-in-loser-clc-meme.png)
+[D3 (https://d3js.org)](https://d3js.org), short for _Data-Driven Documents_, is a JavaScript library that is used for data visualisation. The "_Documents_" of D3 refer to the [document object model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) of a webpage, with which this library interacts. From D3's own website page (_"What is D3?"_, [https://d3js.org/what-is-d3](https://d3js.org/what-is-d3):
 
-These days in tech, it feels like layoffs are the new pandemic overhiring. I don't consider [Canada Learning Code]("https://canadalearningcode.ca") to be a tech company, but, as a company whose mission is to
+> _D3 is not a charting library in the traditional sense. It has no concept of "charts". When you visualize data with D3, you compose a variety of primitives.
+…
+D3 makes things possible, not necessarily easy; even simple things that should be easy are often not. To paraphrase Amanda Cox: "Use D3 if you think it's perfectly normal to write a hundred lines of code for a bar chart."_
 
-> _[bring] accessible computer science to communities across Canada so everyone can create with technology_
+Sounds _perfect_.
 
-I think it would be fair to call it tech-adjacent. The New Year confetti had hardly settled when the email message[^1] landed in my inbox first thing in the morning on Thursday, January 11, 2024 (a.k.a. Judgment Day):
-
-[^1]: This is paraphrased as I (_foolishly_) did not send myself a copy of the email message.
-
-> _Effective immediately, your role as Learning Experience Designer for Adult Programs at Canada Learning Code no longer exists. You will be locked out of your company accounts at the end of the work day._
-
-I wasn't the only one affected by this: across the organisation, short meetings titled "Your role at CLC" were popped into calendars for those of us that were being laid off. These were perfunctory engagements that were followed up with an official termination letter that detailed, among other things, what we should expect in terms of statutory (i.e., legally mandated) compensation as well as what additional severance was being offered-- standard layoff stuff, I imagine.
-
-I say "I imagine" because this is the first time that I've been laid off from a job. I've worked fixed term contracts, where the end date is known from the get go; and I've voluntarily left (resigned from) organisations for one reason or another, but this is the first time I've been suddenly terminated while in a (supposedly) permanent role. It's shitty and I think it feels _especially_ shitty when you're taken by surprise. Unlike when you're anticipating an end date, when you're surprised the processing can only start as early as the day of your termination.[^2]
-
-It wouldn't be fair to say that it took me _totally_ by surprise. As any accomplished calendar snoop or nosy person would know, you can tell when something is afoot. The evidence is there: meetings getting cancelled or moved; company-wide events getting delayed. Still, the scope of such plans can be hard to predict when all you have is the equivalent of digital tea leaves or animal bones. Perhaps it all amounts to nothing–a misreading of the signs; not so much a portent of things to come but a poor interpretation of normal scheduling churn (_spoiler: it wasn't nothing_).
-
-I think part of how I deal with upsetting or unsavoury occurrences like this is seeking to understand what happened. I know what happened to _me_--I was laid off--but what happened _organisationally_? This is something of an intellectual exercise since no matter the conclusions drawn or the lessons learned I will be no less laid off than at the start, but I will rise to the challenge no less, and a challenge it will be: naturally, I will only be able to use publicly available information regardless of whatever inside baseball I may or may not have been privy to (_spoiler: none_). This will also be (perhaps more importantly) a fine excuse to continue learning about a JavaScript library with which I have only dabbled: [Data-Driven Documents (or D3.js)](https://d3js.org).
-
-[^2]: I have other thoughts as to why it feels _extra_ shitty to get laid off from a mission-driven organisation (and about mission-driven organisations in general), but those will go somewhere (or nowhere) else so as to not derail this post too much.
-
-## What data will we use?
+## What data will we (can we) use?
 
 The main constraint for data is that it has to be publicly available. Being a registered Canadian not-for-profit and charity, there is actually a lot of information that can be accessed by way of the organisation's annual statutory filing, the _T3010 Registered Charity Information Return_. I don't need to go that far to find what I want: the information that I want can be found on Canada Learning Code's own website at the bottom of the [_Our Team_ page (https://www.canadalearningcode.ca/our-team/)](https://www.canadalearningcode.ca/our-team/). 
 
@@ -54,29 +40,29 @@ There are few enough folks that I will do this manually, though it would probabl
 - I won't be using names, though they are publicly listed alongside the rest of the information being used.
 - I won't be differentiating between full-time and part-time people because that information doesn't seem outwardly apparent or available.
 
-## What is D3 (and D3.js)?
-
-[D3 (https://d3js.org)](https://d3js.org), short for _Data-Driven Documents_, is a JavaScript library that is used for data visualisation. The "_Documents_" of D3 refer to the [document object model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) of a webpage, with which this library interacts. From D3's own website page (_"What is D3?"_, [https://d3js.org/what-is-d3](https://d3js.org/what-is-d3):
-
-> _D3 is not a charting library in the traditional sense. It has no concept of "charts". When you visualize data with D3, you compose a variety of primitives.
-…
-D3 makes things possible, not necessarily easy; even simple things that should be easy are often not. To paraphrase Amanda Cox: "Use D3 if you think it's perfectly normal to write a hundred lines of code for a bar chart."_
-
-Sounds _perfect_.
-
 ## Getting D3 Set Up
 
-As a JavaScript library, you can use a `<script>` tag to pull it in from a JavaScript CDN like `jsdelivr.net` which is what I will be doing [^3]:
+There are lots of ways to load D3, however I will be using an `import` statement to grab it as an ECMAScript module (ESM) bundle from the JavaScript CDN `jsdelivr.net`[^3]:
 
 [^3]: D3 also plays nice with other popular frameworks such as React and Svelte. Check out their [Getting Started page](https://d3js.org/getting-started) for more details on the different ways you can use D3.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<!DOCTYPE html>
+<script type="module">
+    import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+    // your code goes here
+</script>
+<div id="d3-container">
+    <!-- this will hold whatever D3 generates -->
+</div>
 ```
 
-From there, we can start using the different D3 components on our page throught the `d3` object/namespace.
+1. Note how the `<script>` tag has a `type` attribute of `module`[^5]: this is necessary to be able to make use of the `import` statement. Without it, you'll get an error message along the lines of: `SyntaxError: Cannot use import statement outside a module`. After the `import` statement, we can start using the different D3 components on our page throught the `d3` object/namespace.
+1. I've also created a `<div>` with `id="d3-container"`, which will be the target for the elements created with D3.
 
-### Loading the data
+[^5]: Learn more about the differences between JavaScript modules and standard scripts here: _[MDN: JavaScript Modules # Other differences between modules and standard scripts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_standard_scripts)_
+
+## Loading the data
 
 __Did you know that if you drag-select and copy cells from Google Sheets, they will be pasted as a tab-separated values (tsv) string?__ I've gathered the data that I'll be working with as detailed above and I've staged it in a Google Sheets document structured as follows:
 
@@ -138,8 +124,18 @@ Marketing Coordinator	FALSE	MARCOM	0`
 </div>
 </details>
 
+With a well formed tsv string, I can use the `d3.tsvParse()` method to--_you guessed it_--parse the tsv string into an array of objects, using each column name as a property.
+
+```js
+const data = d3.tsvParse(rawData);
+//console.log(data); 
+// [ 
+//     { "Role": "Chief Executive Officer", "LaidOff": "FALSE", "Functional": "", "Hierarchy": "4" },
+//     { "Role": "Chief Strategy & People Officer", "LaidOff": "FALSE", "Functional": "", "Hierarchy": "3" },
+//     // and 40 other entries ...    
+// ]
+```
+
 
 
 ---
-
-
