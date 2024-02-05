@@ -162,9 +162,9 @@ The `fill` and `stroke` attributes are probably self-explanatory, but the `d` at
 
 ### Planning the next move
 
-1. ~`import` D3 ECMAScript module inside a `<script>` element with `type="module"`~ ✅
-1. ~Create a container `<div>` for our future chart.~ ✅
-1. ~Format data as tsv string and load with `d3.tsvParse()`.~ ✅
+1. ~~`import` D3 ECMAScript module inside a `<script>` element with `type="module"`~~ ✅
+1. ~~Create a container `<div>` for our future chart.~~ ✅
+1. ~~Format data as tsv string and load with `d3.tsvParse()`.~~ ✅
 1. Create a root `<svg>` element to contain the chart graphics, defining a `width` and `height`.
 1. Create a `<g>` (group) element to contain the `<path>` elements that will make up the pie chart.
 1. Use `d3.pie()` and `d3.arc()` to generate the code for the pie chart slices, based on some data that we'll provide.
