@@ -140,6 +140,13 @@ const data = d3.tsvParse(rawData);
 
 {% include d3-js-example-simple.html %}
 
+<details><summary>See the code:</summary>
+<div markdown="1">
+```html
+{% include d3-js-example-simple.html %}
+```
+</div>
+
 From here, we can begin to use (some of) the rest of D3's functionality to explore the data. The "100 lines of code" is, in this case, a bit of an exaggeration, but it's true that there's more than a little bit of setup and preparation necessary to make even a simple chart. Let's take a pie chart[^6], for example:
 
 [^6]: A pie chart is a way of representing fractions or proportions, with each group carving out a certain amount of "chart angle" (pie slice) based on its size relative to other groups.

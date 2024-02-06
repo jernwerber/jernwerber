@@ -1,0 +1,49 @@
+<details><summary>Show data string</summary>
+<div markdown="1">
+```js
+const rawData = `Role	LaidOff	Functional	Hierarchy
+Chief Executive Officer	FALSE		4
+Chief Strategy & People Officer	FALSE		3
+Director, Fund Development	FALSE	FUND	2
+Director, Partnerships & Program Facilitation	FALSE		2
+Director of Marketing and Communications	FALSE	MARCOM	2
+Director of Finances & Accounting	TRUE	FIN	2
+Director, Programs	FALSE		2
+K-12 Program Manager	TRUE		1
+Adult Program Manager	FALSE		1
+Manager, Chapters	FALSE		1
+Senior Manager, Partnerships	FALSE		1
+Senior Manager, Program Facilitation	FALSE		1
+Senior Project Manager	TRUE		1
+Sr Manager Evaluation & Impact Measurement	TRUE	EVAL	1
+Senior People and Culture Manager	FALSE	HR	1
+Senior Marketing Manager	FALSE	MARCOM	1
+Instructional Training Manager	FALSE		1
+Senior Fund Development Specialist	TRUE		0
+Sr. Learning Experience Designer	TRUE		0
+Senior Partner Development Lead	TRUE		0
+Senior Learning Facilitator	TRUE		0
+Senior Learning Facilitator	TRUE		0
+Senior Learning Facilitator	TRUE		0
+Senior Fund Development Lead	FALSE	FUND	0
+Senior Fund Development Lead	FALSE	FUND	0
+Partnership Development	TRUE		0
+Lead, Teen Ambassador Program (TAP)	TRUE		0
+Senior Partnership Development Lead	TRUE		0
+Senior Bilingual Learning Facilitator	TRUE		0
+Senior Bilingual Learning Facilitator	TRUE		0
+Bilingual learning Facilitator	TRUE		0
+Learning Experience Designer, Adult Programs	TRUE		0
+Learning Facilitator	TRUE		0
+Learning Facilitator	TRUE		0
+Learning Facilitator	TRUE		0
+Learning Facilitator	TRUE		0
+Bilingual, Partnership Development	TRUE		0
+Accountant	FALSE	FIN	0
+People and Culture Coordinator	TRUE	HR	0
+Data Analyst	TRUE	EVAL	0
+Partnerships Coordinator	TRUE		0
+Marketing Coordinator	FALSE	MARCOM	0`
+```
+</div>
+</details>
