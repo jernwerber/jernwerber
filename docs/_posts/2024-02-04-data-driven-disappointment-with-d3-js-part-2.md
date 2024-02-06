@@ -20,7 +20,7 @@ The main constraint for data is that it has to be publicly available. Being a re
 
 The plan is simple and easily reproducible:
 
-1. Grab a historic version of the Our Team page from the Internet Archive's [WayBack Machine (https://web.archive.org/)](https://web.archive.org/) from some 1. time around Judgment Day but before the webpage was updated.
+1. Grab a historic version of the Our Team page from the Internet Archive's [WayBack Machine (https://web.archive.org/)](https://web.archive.org/) from some time around Judgment Day but before the webpage was updated.
 1. Grab an up-to-date or updated version of the Our Team page.
 1. Tabulate the roles of the people listed for the HQ Team.
 1. Cross-reference the people listed for the HQ Team between page versions: If they aren't present in the updated version, they're likely (enough) to have been laid off. Flag these people.
@@ -151,8 +151,31 @@ From here, we can begin to use (some of) the rest of D3's functionality to explo
 
 [^6]: A pie chart is a way of representing fractions or proportions, with each group carving out a certain amount of "chart angle" (pie slice) based on its size relative to other groups.
 
-- A pie chart is made of slices. In D3, a pie slice (or circle fraction) is called an `arc`.
-- An `arc` is defined by an `innerRadius`, an `outerRadius`, a `startAngle`, and a `stopAngle`.
-- It would be a hassle to have to determine these ourselves, but D3 has a pie generator, `d3.pie()` which can calculate the appropriate values for `startAngle` and `stopAngle` based on data that we provide.
+1. A pie chart is made of slices. In D3, a pie slice (or circle fraction) is called an `arc`.
+1. An `arc` is defined by an `innerRadius`, an `outerRadius`, a `startAngle`, and a `stopAngle`.
+1. It would be a hassle to have to determine these ourselves, but D3 has a pie generator, `d3.pie()` which can calculate the appropriate values for `startAngle` and `stopAngle` based on data that we provide.
+
+Even with those tools to help us, we're still responsible for creating the scalable vector graphics (SVG) elements and inserting them into the DOM. SVGs are images that are made of paths defined in code. Behind the scenes, each pie segment in the example above looks a little something like:
+
+```html
+<path 
+  fill="rgb(211, 238, 206)" 
+  stroke="none" 
+  d="M-48.808,-109.625A120,120,0,0,1,0,-120L0,-68.4A68.4,68.4,0,0,0,-27.821,-62.487Z">
+</path>
+```
+
+The `fill` and `stroke` attributes are probably self-explanatory, but the `d` attribute is where the magic happens: this defines what shape the path will take when drawn--in our case, how the pie segment will appear. Thankfully, we're not the ones coming up with these numbers: we can provide data to `d3.arc()` and have it compute the appropriate paths.
+
+### Planning the next move
+
+1. ~~`import` D3 ECMAScript module inside a `<script>` element with `type="module"`~~ ✅
+1. ~~Create a container `<div>` for our future chart.~~ ✅
+1. ~~Format data as tsv string and load with `d3.tsvParse()`.~~ ✅
+1. Create a root `<svg>` element to contain the chart graphics, defining a `width` and `height`.
+1. Create a `<g>` (group) element to contain the `<path>` elements that will make up the pie chart.
+1. Use `d3.pie()` and `d3.arc()` to generate the code for the pie chart slices, based on some data that we'll provide.
+1. Put the generated pie chart into the container `<div>`.
+1. Admire our handiwork! 💪
 
 ---
