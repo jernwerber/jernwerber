@@ -113,7 +113,7 @@ We're _almost_ there. This is where we encounter some `d3` specific functionalit
 1. Use `d3.pie()` to generate the start and stop angles for each slice, based on the size of the groups in our data.
 1. Create and append an SVG group element, `<g>`, to act as a container for the pie slices.
 1. Bind the generated pie slice data to `<path>` elements in the group that we just created.
-1. Set the `<path>` element's `fill` and `stroke` colors.
+1. Set the `<path>` element's `fill` and `stroke` colors by way of the `attr()` method.
 1. Use `d3.arc()` to populate the `<path>` element's `d` attribute for the path, which determines how the `<path>` is drawn.
 1. Append a `<title>` element to each `<path>` that describes the data that the pie slice is representing.
 1. _Finally,_ append the SVG to the container `<div>`.
@@ -160,3 +160,68 @@ We're _almost_ there. This is where we encounter some `d3` specific functionalit
     <!-- this will hold whatever D3 generates -->
 </div>
 ```
+
+### Binding and joining data
+
+There's a bit to unpack in that code. First is the `d3` pattern of 
+
+```js
+selection.selectAll().data().join();
+```
+
+which is how some of the future `d3` magic works: it makes less sense right now since there are no existing elements that match `selectAll("path")`, _but if there were_, this is how `d3` would be able to select chart elements and update them with new data based on `.data().join("path")`.
+
+Next is how data is being provided to the `data()` method: `d3.pie()` returns a _function_ that can be used with a dataset to generate the appropriate values for `startAngle` and `endAngle`. The function created by `d3.pie()` returns an array of objects based on the input data with the following structure[^d3jsPie]:
+
+[^d3jsPie]: [`d3.pie()` documentation (https://d3js.org/d3-shape/pie#_pie)](https://d3js.org/d3-shape/pie#_pie)
+
+```js
+// these are generic values, but the structure is what's important
+[
+    {
+        "data":  1, // the original data point. in our case, this would be an object.
+        "value":  1, // the value derived from the original data point
+        "index": 6,
+        "startAngle": 6.050474740247008, // angle in RADIANS 
+        "endAngle": 6.166830023713296, // angle in RADIANS
+        "padAngle": 0 // gap between slices also in RADIANS
+    },
+    // ...
+]
+```
+  
+As for using/creating/calling `d3.pie()`, the two approaches below are equivalent:
+
+```js
+// create and call the function on one line
+d3.pie().value(d => d[1].length)(groupedData);
+// ----- pie() function -------|-- argument --|
+
+// or
+
+// create the function and assign it to a variable
+const pieGenerator = d3.pie().value(d => d[1].length);
+// call the function using that same variable
+pieGenerator(groupedData);
+
+```
+
+We also need to instruct `d3` on how to extract (access) the necessary `value` from the data being provided, the sum of which determine the proportion of the pie that the slice should take. We can use an arrow function (`=>`) for this purpose.
+
+Recall that our groupedData Map can be accessed as an array of arrays, i.e.:
+
+```js
+// [    
+//     [ "TRUE", [ /* datapoints as objects in this array */ ] ],
+//     [ "FALSE", [ /* datapoints as objects in this array */ ] ]
+// ]
+```
+
+For each group:
+
+- `d[0]` is the group label, `"TRUE"` or `"FALSE"`
+- `d[1]` is the datapoint array, the length of which is how many points are in the array
+
+So, `d => d[1].length` could be used as the "value" that would determine a group's slice of the pie.
+
+---
