@@ -98,6 +98,16 @@ SELECT LaidOff, COUNT(*) FROM data GROUP BY LaidOff
 
 ## Generating the pie (and) slices with `d3.pie()` and `d3.arc()`
 
+{% include d3-js-clc-chart-1.html %}
+
+<details><summary>See the code:</summary>
+<div markdown="1">
+```html
+{% include d3-js-clc-chart-1.html %}
+```
+</div>
+</details>
+
 We're _almost_ there. This is where we encounter some `d3` specific functionality in the form of data binding (with the `data()` method) and data joining (with the `join()`) method. Now we need to do the following:
 
 1. Use `d3.pie()` to generate the start and stop angles for each slice, based on the size of the groups in our data.
