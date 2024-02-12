@@ -54,7 +54,9 @@
     const d3svg = d3.create("svg")
       .attr("width", svgWidth)
       .attr("height", svgHeight)
-      .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight]);
+      .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight])
+      .style("background-color", "lightblue")
+      ;
     
     d3svg.append("g")
       .selectAll("path")

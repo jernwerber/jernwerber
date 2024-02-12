@@ -100,13 +100,15 @@ SELECT LaidOff, COUNT(*) FROM data GROUP BY LaidOff
 
 {% include d3-js-clc-chart-1.html %}
 
-<details><summary>See the code:</summary>
+<details><summary>👆 The endpoint for this section. _See the code_:</summary>
 <div markdown="1">
 ```html
 {% include d3-js-clc-chart-1.html %}
 ```
 </div>
 </details>
+
+&nbsp;
 
 We're _almost_ there. This is where we encounter some `d3` specific functionality in the form of data binding (with the `data()` method) and data joining (with the `join()`) method. Now we need to do the following:
 
@@ -171,7 +173,7 @@ selection.selectAll().data().join();
 
 which is how some of the future `d3` magic works: it makes less sense right now since there are no existing elements that match `selectAll("path")`, _but if there were_, this is how `d3` would be able to select chart elements and update them with new data based on `.data().join("path")`.
 
-### Using `d3.pie()` to generate pie slice angles
+### Generating pie slice start and end angles
 
 Next is how data is being provided to the `data()` method: `d3.pie()` returns a _function_ that can be used with a dataset to generate the appropriate values for `startAngle` and `endAngle`. The function created by `d3.pie()` returns an array of objects based on the input data with the following structure[^d3jsPie]:
 
@@ -210,13 +212,13 @@ pieGenerator(groupedData);
 
 We also need to instruct `d3` on how to extract (access) the necessary `value` from the data being provided, the sum of which determine the proportion of the pie that the slice should take. We can use an arrow function (`=>`) for this purpose.
 
-Recall that our groupedData Map can be accessed as an array of arrays, i.e.:
+Recall that our `groupedData` Map can be accessed as an array of arrays, i.e.:
 
 ```js
-// [    
-//     [ "TRUE", [ /* datapoints as objects in this array */ ] ],
-//     [ "FALSE", [ /* datapoints as objects in this array */ ] ]
-// ]
+[    
+    [ "TRUE", [ /* datapoints as objects in this array */ ] ],
+    [ "FALSE", [ /* datapoints as objects in this array */ ] ]
+]
 ```
 
 For each group:
@@ -224,7 +226,7 @@ For each group:
 - `d[0]` is the group label, `"TRUE"` or `"FALSE"`
 - `d[1]` is the datapoint array, the length of which is how many points are in the array
 
-So, `d => d[1].length` could be used as the "value" that would determine a group's slice of the pie.
+So, `d => d[1].length`, as a count of the datapoints belonging to a group, could be used as the `value` that would determine a group's slice of the pie.
 
 ### Using `d3.arc()` to generate paths
 
