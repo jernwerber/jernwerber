@@ -75,16 +75,8 @@ We can get a sense of the structure of `groupedData` using the spread operator `
 ```js
 console.log(...groupedData); // or console.log(Array.from(groupedData))
 // [
-//     ["TRUE",
-//         [ 
-//             // all data where LaidOff === "TRUE"
-//         ]
-//     ],
-//     ["FALSE",
-//         [
-//             // all data where LaidOff === "FALSE"
-//         ]
-//     ]
+//     [ "TRUE", [ // all data where LaidOff === "TRUE" ] ],
+//     [ "FALSE",[ // all data where LaidOff === "FALSE" ] ]
 // ]
 
 ```
@@ -100,7 +92,7 @@ SELECT LaidOff, COUNT(*) FROM data GROUP BY LaidOff
 
 {% include d3-js-clc-chart-1.html %}
 
-<details><summary>👆 The endpoint for this section. _See the code_:</summary>
+<details><summary>👆 The endpoint for this section. <em>See the code</em>:</summary>
 <div markdown="1">
 ```html
 {% include d3-js-clc-chart-1.html %}
@@ -109,7 +101,6 @@ SELECT LaidOff, COUNT(*) FROM data GROUP BY LaidOff
 </details>
 
 &nbsp;
-
 We're _almost_ there. This is where we encounter some `d3` specific functionality in the form of data binding (with the `data()` method) and data joining (with the `join()`) method. Now we need to do the following:
 
 1. Use `d3.pie()` to generate the start and stop angles for each slice, based on the size of the groups in our data.
@@ -239,5 +230,6 @@ selection.join("path")
     .attr("d", d3.arc().innerRadius(50).outerRadius(100))
 ```
 
+Like the function created by `d3.pie()`, the function created by `d3.arc()` needs to be provided data to be able to generate the code for the `<path>` elements. We can specify inner and outer radii by chaining the methods `innerRadius()` and `outerRadius()` onto `d3.arc()` (if the `innerRadius()` is greater than 0, the created `d3.arc()` function will generate a donut shape). When using this function, if we don't explicitly specify what data to use, it will implicitly use the data that has already been bound-- which is actually a good thing in this case since that contains both a `startAngle` and an `endAngle`.
 
 ---

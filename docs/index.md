@@ -1,8 +1,5 @@
 ---
-title: Welcome to my blog
+title: 'jernwerber.dev: words & code'
 ---
-# GitHub pages
 
-## What's this all about?
-
-What _is_ this all about, you ask?
+A place for me to put things to show other people.
