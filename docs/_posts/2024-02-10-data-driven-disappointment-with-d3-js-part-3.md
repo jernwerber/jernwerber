@@ -1,13 +1,13 @@
 ---
 title: "Data-Driven Disappointment Part 3: Dealing with data"
 
-first_post: 2024-02-01-data-driven-disappointment-with-d3-js-part-1.md
-previous_post: 2024-02-04-data-driven-disappointment-with-d3-js-part-2.md 
+first_post: 2024-02-01-data-driven-disappointment-with-d3-js-part-1
+previous_post: 2024-02-04-data-driven-disappointment-with-d3-js-part-2 
 ---
 
 In part 3 of this series on using the D3 JavaScript library (d3.js), we will look at using the functionality provided by D3 to group our data, then use that grouped data as the basis for a simple pie chart showing the relative sizes (proportions) of the groups. We will look at a couple common D3 patterns, including select-data-join and creating and calling generated functions.
 
-_Note: if you're just coming to this series or need a refresher on the story so far, why not check out the [first post]({%- link page.first_post -%}) or the [previous post (part 2)]({%- link page.previous_post -%})?_
+_Note: if you're just coming to this series or need a refresher on the story so far, why not check out the [first post]({%- post_url page.first_post -%}) or the [previous post (part 2)]({%- post_url page.previous_post -%})?_
 
 ## The starting point
 
