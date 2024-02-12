@@ -3,4 +3,9 @@ title: "jernwerber.dev: words and code"
 author: "jernwerber"
 description: "Selected works of Jonthan Weber (@jernwerber) with some bonus words and code."
 markdown: kramdown
+
+twitter_username: jernwerber
+github_username: jernwerber
+
 google_analytics: G-VVEDYZ776Q
+show_excerpts: true
