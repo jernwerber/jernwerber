@@ -2,6 +2,10 @@
 title: "Data-Driven Disappointment Part 2: Getting set up and getting started"
 ---
 
+In part 2 of this series on using the D3 Javascript library (d3.js), we will look at one way to setup data to be consumed by D3 via a tab-separated values data string copied directly out of Google Sheets. We will also be introduced to the dataset that we'll be using throughout, a list of lay off casualties derived from the publicly available team information on the website of my former employer, Canada Learning Code.
+
+_Note: if you're just coming to this series or need a refresher on the story so far, why not check out the [first post]({%- post_url 2024-02-01-data-driven-disappointment-with-d3-js-part-1 -%})?_
+
 ## What is D3 (and D3.js)?
 
 [D3 (https://d3js.org)](https://d3js.org), short for _Data-Driven Documents_, is a JavaScript library that is used for data visualisation. The "_Documents_" of D3 refer to the [document object model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) of a webpage, with which this library interacts. From D3's own website page (_"What is D3?"_, [https://d3js.org/what-is-d3](https://d3js.org/what-is-d3):
@@ -178,5 +182,7 @@ The `fill` and `stroke` attributes are probably self-explanatory, but the `d` at
 1. Use `d3.pie()` and `d3.arc()` to generate the code for the pie chart slices, based on some data that we'll provide.
 1. Put the generated pie chart into the container `<div>`.
 1. Admire our handiwork! 💪
+
+_Are you having fun yet? We'll pick this up in the next post, [{{ page.next.title }}]({{ page.next.url }})_ 
 
 ---
