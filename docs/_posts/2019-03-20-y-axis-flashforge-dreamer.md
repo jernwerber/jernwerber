@@ -1,5 +1,6 @@
 ---
 title: "From the Archives: Troubleshooting a y-axis issue on the Flashforge Dreamer"
+excerpt_separator: <!--more-->
 ---
 
 _Another one from the archives, hence the date. This one might actually still be relevant, assuming that I can find and reupload the datasheet that was previously linked._
@@ -9,8 +10,9 @@ I was having an issue with the y-axis in my 3D printer. It had suddenly started 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qt6f9YaMT4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 __That... doesn't sound good.__
+<!--more-->
 
-It was only happening along the y-axis, which helped to narrow down the problem. Part of the challenge, though, was that I couldn't find the manufacturer's datasheet for this stepper motor, the 17HD4063-05N, and that a much more common issue, that exhibits similar symptoms, was all that I could find when trying to narrow down the problem. I could rule out the common issue, a broken cable harness, by testing the continuity of the harness with my multimeter and I could rule out a bad driver by swapping drivers. So, I reached out to Flashforge support, and my support contact, Tang, found a datasheet for the 17HD4063-**06****N which I've linked to here: 
+It was only happening along the y-axis, which helped to narrow down the problem. Part of the challenge, though, was that I couldn't find the manufacturer's datasheet for this stepper motor, the 17HD4063-05N, and that a much more common issue, that exhibits similar symptoms, was all that I could find when trying to narrow down the problem. I could rule out the common issue, a broken cable harness, by testing the continuity of the harness with my multimeter and I could rule out a bad driver by swapping drivers. So, I reached out to Flashforge support, and my support contact, Tang, found a datasheet for the 17HD4063-**06**N which I've linked to here: 
 
 > File attachment missing-- needs to be found & reuploaded
 
