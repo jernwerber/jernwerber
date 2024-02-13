@@ -1,6 +1,7 @@
 ---
 title: "From the Archives: Logging accelerometer data from the micro:bit"
 excerpt_separator: <!--more-->
+math: true
 ---
 
 _Another one from the archives, hence the date. I'm republishing this one because it has some interesting information about the micro:bit's accelerometer, though the actual data logging part might be a bit moot given the improvements that have occurred to MakeCode's functionality._
@@ -38,9 +39,7 @@ while True:
 ```
 Of course, every additional line of code we add would slow down execution, but practically speaking, we probably only need to sample acceleration at most 10-20 times per second (sampling frequency). To get the sampling period, i.e. the time between samples, recall that period is the inverse of frequency:
 
-```math
-period = { 1 \over frequency }
-```
+$$ period = { 1 \over frequency } $$
 
 Thus, to achieve a sampling frequency of 10 times per second, we need to leave 1/10 of second (100 milliseconds)  between samples. We can do this using the micro:bit's built-in `sleep()` function as follows:
 
