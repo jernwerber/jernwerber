@@ -27,19 +27,20 @@ from microbit import *
 counter = 0
 
 while True:
-   
-    if counter % 5000 == 0:
-        print(&quot;{n} iterations in {t} ms ({rate} per second)&quot;.format(
-                n=counter, 
-                t=running_time(),
-                rate=counter*1000/(running_time())))
+    if counter % 5000 == 0:
+        print('{n} iterations in {t} ms ({rate} per second)'.format(
+            n=counter, 
+            t=running_time(),
+            rate=counter*1000/(running_time())))
 
-    accelerometer.get_values()
-    counter = counter + 1
+    accelerometer.get_values()
+    counter = counter + 1
 ```
 Of course, every additional line of code we add would slow down execution, but practically speaking, we probably only need to sample acceleration at most 10-20 times per second (sampling frequency). To get the sampling period, i.e. the time between samples, recall that period is the inverse of frequency:
 
-$$ period = { 1 \over frequency } $$
+```math
+period = { 1 \over frequency }
+```
 
 Thus, to achieve a sampling frequency of 10 times per second, we need to leave 1/10 of second (100 milliseconds)  between samples. We can do this using the micro:bit's built-in `sleep()` function as follows:
 
@@ -49,9 +50,8 @@ from microbit import *
 frequency = 10
 
 while True:
-
-    print(accelerometer.get_values())
-    sleep(1000/frequency)
+    print(accelerometer.get_values())
+    sleep(1000/frequency)
 ```
 
 You might notice that I used the `print()` function in the previous block of code. If you use Mu ([https://codewith.mu](https://codewith.mu)) as your code editor, you'll have access to a REPL which is essentially like a console, meaning that you can print out text from your micro:bit. Mu also has a plotter which will automatically plot any tuples emitted using print-- lucky for us, `accelerometer.get_values()` provides such tuples:
