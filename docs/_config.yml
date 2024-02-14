@@ -1,11 +1,16 @@
 theme: minima
 title: "jernwerber.dev: words and code"
-author: "jernwerber"
+author: "Jonathan Weber"
 description: "Selected works of Jonthan Weber (@jernwerber) with some bonus words and code."
 markdown: kramdown
 
+url: "https://jernwerber.dev"
+plugins:
+  - jekyll-sitemap 
+
 twitter_username: jernwerber
 github_username: jernwerber
+linkedin_username: jnthn-wbr
 
 google_analytics: G-VVEDYZ776Q
 show_excerpts: true
