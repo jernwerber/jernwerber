@@ -55,7 +55,7 @@ while True:
 
 You might notice that I used the `print()` function in the previous block of code. If you use Mu ([https://codewith.mu](https://codewith.mu)) as your code editor, you'll have access to a REPL which is essentially like a console, meaning that you can print out text from your micro:bit. Mu also has a plotter which will automatically plot any tuples emitted using print-- lucky for us, `accelerometer.get_values()` provides such tuples:
 
-> Image missing here
+![Screenshot of the Mu IDE showing micro:bit accelerometer tuples being written to a REPL while also producing a 3-color line plot for visualization](/assets/img/microbit-mu-repl-plot.png){: style="display:block;max-width:100%;"}
 
 Pretty neat!
 
