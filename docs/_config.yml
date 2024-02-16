@@ -1,10 +1,16 @@
 theme: minima
 title: "jernwerber.dev: words and code"
 author: "Jonathan Weber"
-description: "Selected works of Jonthan Weber (@jernwerber) with some bonus words and code."
+
+description: "Selected works of Jonathan Weber (@jernwerber), maker, tinkerer software developer, educational researcher and instructional designer, specializing in coding & science, technology, engineering, and mathematics (STEM) skills development. May contain traces of philosophy, policy discussion, coding tutorials (for CSS, JavaScript & Python, mostly), and other silly bits, as well as coding, robotics, physical computing, electronics, 3D printing, laser cutting, computer-aided design and modelling (CAD/CAM), machining and even woodworking projects."
+
 markdown: kramdown
 
 url: "https://jernwerber.dev"
+
+header_pages:
+  - portfolio.md
+
 plugins:
   - jekyll-sitemap 
 
