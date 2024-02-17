@@ -2,6 +2,10 @@
 ---
 @import "{{ site.theme }}";
 
+hr {
+    margin-bottom:1em;
+}
+
 .post-content details {
     background-color: lemonchiffon;
     padding: 0.5em 1em;
