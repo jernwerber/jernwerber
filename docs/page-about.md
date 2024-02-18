@@ -3,8 +3,6 @@ title: About
 permalink: /about
 ---
 
-**Hi! 👋 Great to meet you! My name is Jonathan and this is one of my little corners of the Internet. Please take your shoes off at the door.**{: style="font-size:1.5em;"}
-
 I've been a developer on the web for at least a decade, cutting my teeth on _ye olde Internet_ back when server-side includes (SSI), Macromedia Flash, and Adobe Contribute were all the rage. Since then I've used everything[^1] from **PHP** (and Drupal), to **Wordpress** (both pre- and post-Gutenberg's introduction), to **ASP** and **C#.NET**, to **Python** (with Django), all mixed with a healthy dose of **HTML, CSS, and JavaScript**. 
 
 [^1]: I'd be remiss if I didn't find some way to include the quality time spent during my engineering and computer science undergraduate degrees (B.A.Sc. chemical engineering & B.Sc. computing technology) with crowd favourite **Java**.
