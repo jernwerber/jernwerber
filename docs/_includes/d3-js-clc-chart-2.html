@@ -1,0 +1,95 @@
+<script type="module">
+    import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+  
+    const data = await d3.tsv("https://jernwerber.dev/static/clc-laid-off-2024-01-20.tsv");
+    
+    const groupedData = d3.group(data, d => d.LaidOff);
+    
+    const svgWidth = 500;
+    const svgHeight = 300;
+    
+    const outerRadius = 100;
+    const innerRadius = 50;
+    
+    const shiftX = 0;
+    const shiftY = 30;
+    
+    const baseColor = "crimson";
+    const backgroundColor = "whitesmoke";
+    
+    const d3svg = d3.create("svg")
+      .attr("width", svgWidth)
+      .attr("height", svgHeight)
+      .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight])
+      .style("background-color", backgroundColor)
+    ;
+    
+    d3svg.append("g")
+      .attr("transform",`translate(${shiftX},${shiftY})`)
+      .selectAll("path")
+      .data(
+        d3.pie().value(d => d[1].length)(groupedData)
+      )
+      .join("path")
+        .attr("fill", (d, i) => d3.color(baseColor).darker(i/2))
+        .attr("stroke", "none")
+        .attr("d", d3.arc().innerRadius(50).outerRadius(100))
+        .append("title")
+          .text(d => d.data[1].length)
+    ;
+    
+    d3svg.append("g")
+      .attr("transform",`translate(${shiftX},${shiftY})`)
+      .selectAll("g")
+      .data(
+        d3.pie().value(d => d[1].length)(groupedData)
+      )
+      .join("g")  
+        .each(function (d, i) {
+        const [x,y] = d3.arc().innerRadius(50).outerRadius(100).centroid(d);
+  
+        const g = d3.select(this);
+        const labelWidth = 36;
+        const labelHeight = 24;
+  
+        g.append("rect")
+            .attr("x", x - labelWidth/2)
+            .attr("y", y - labelHeight/2)
+            .attr("width",labelWidth)
+            .attr("height",labelHeight)
+            .attr("fill", d3.color("crimson").darker(1.5))
+        ;
+  
+          g.append("text")
+            .attr("dy",6)
+            .attr("text-anchor","middle")
+            .text(`${d.data[1].length}`)
+            .attr("x", x)
+            .attr("y", y)
+            .attr("fill","white")
+            .style("font-weight","bold")
+            .style("font-family","Roboto")
+        ;  
+      })
+    ;
+    
+    d3svg.append("g")
+        .attr("id", "title-text")
+        .attr("text-anchor", "middle")
+        .attr("transform",`translate(0 ${ -svgHeight/2 + shiftY })`)
+        .style("font-size","20")     
+    .selectAll("text")
+    .data(["CLC Layoffs 2024:", "NOT LAID OFF vs LAID OFF"])
+        .join("text")
+            .text(d => d)
+            .attr("dy", (d,i) => 24 * i)
+    ;
+    
+    d3.select("#d3-container-2").node()
+      .append(d3svg.node())
+    ;
+    
+  </script>
+  <div id="d3-container-2">
+    <!-- this will hold whatever D3 generates -->
+  </div>

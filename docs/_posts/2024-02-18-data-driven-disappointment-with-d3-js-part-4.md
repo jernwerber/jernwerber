@@ -26,4 +26,36 @@ _Note: if you're just coming to this series or need a refresher on the story so 
 </div>
 </details>
 
-At the end of [part 3 of this series]({%- post_url 2024-02-10-data-driven-disappointment-with-d3-js-part-3 -%}), we had a functional--_if a little boring_--pie chart, constructed through the use of `d3.pie()` and `d3.arc()`. With it, we can see the relative proportion of how many people were laid off compared to not, but only if we hover over each of the pie slices and read the labels.
+At the end of [part 3 of this series]({%- post_url 2024-02-10-data-driven-disappointment-with-d3-js-part-3 -%}), we had a functional--_if a little boring_--pie chart, constructed through the use of `d3.pie()` and `d3.arc()`. With it, we can see the relative proportion of how many people were laid off compared to not, but only if we hover over each of the pie slices and read the labels. Let's fix that by adding labels to the pie slices, as well as a title to describe the chart.
+
+## But first: Loading data from a file
+
+The data string that we've been hauling around has been useful as an illustrative device, but I think it's unfairly inflating the line count for our d3 chart. Instead, let's load our data from a file that's been hosted (e.g., on GitHub), using the method `d3.tsv()`:
+
+```javascript
+// const rawData = `...`
+// const data = d3.tsvParse(rawData);
+
+const data = await d3.tsv("https://jernwerber.dev/static/clc-laid-off-2024-01-20.tsv");
+```
+
+- The `d3.tsv()` method loads and parses a `tsv` file from a URL; we don't need to explicitly parse it afterwards like we have to do with the data string.
+- The `await` keyword is necessary because `d3.tsv()` is an asynchronous method based on `fetch()` so instead of blocking code execution by default, as a normal (synchronous) method would, it would instead return a `Promise`. Using the `await` keyword instructs JavaScript to wait until the `Promise` resolves before continuing, allowing us to use `d3.tsv()` effectively as a synchronous method.
+
+This will shorten our code significantly (40+ fewer lines!) and we can imagine other potential use cases for this, such as point this function at a file that gets periodically updated, meaning we could have a data visualization that's always up-to-date.
+
+## Disclaimer: Complexity and experience
+
+This is around the area where the complexity of our code can kind of... _explode_. This is also around the edge of my experience of D3--I've dabbled and created things, but I do have to spend significantly more time figuring things out. I say this because I don't want you learning any bad habits from me. We will be building code that _ostensibly_ works, but it might not necessarily be structured in a way that would be considered a best practice. The most I can hope for is that the experience that I'm detailing here will help you to figure your own issues out or help you to understand D3 a little bit deeper than before.
+
+With all that out of the way, here's where we're headed:
+
+{% include d3-js-clc-chart-2.html %}
+
+<details><summary>👆 A little bit has been added 😅. <em>See the code</em>:</summary>
+<div markdown="1">
+```html
+{% include d3-js-clc-chart-2.html %}
+```
+</div>
+</details>
