@@ -2,7 +2,7 @@
 title: "Data-Driven Disappointment Part 4: Colour and text"
 
 first_post: 2024-02-01-data-driven-disappointment-with-d3-js-part-1
-previous_post: 2024-02-04-data-driven-disappointment-with-d3-js-part-3
+previous_post: 2024-02-10-data-driven-disappointment-with-d3-js-part-3
 
 tags:
     - D3
