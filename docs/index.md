@@ -1,6 +1,5 @@
 ---
 title: 'jernwerber.dev: words & code'
-exclude: true
 ---
 
 {% assign about = site.pages | where:"title", "About me: Front page" | first %}
@@ -10,7 +9,7 @@ exclude: true
 
 **Hi! 👋 My name is [Jonathan]({% link page-about.md %}){: style="text-decoration:underline wavy;"} and this is one of my little corners of the Internet. Please take your shoes off at the door.**{: style="font-size:1.5em;"}
 
-## About me (⚡️ LIGHTNING ROUND ⚡️)
+## About me _⚡️LIGHTNING ROUND EDITION⚡️_
 
 ### Coding
 - **Front end:** JavaScript · HTML5 · CSS3 · Markdown · Liquid

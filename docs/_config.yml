@@ -17,6 +17,7 @@ url: "https://jernwerber.dev"
 
 header_pages:
   - page-about.md
+  - page-posts.md
   - page-portfolio.md
 
 plugins:
