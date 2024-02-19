@@ -68,10 +68,10 @@ And with that, we can also visualize the answer to the question we posed earlier
 **The question:** _How many people were laid off from Canada Learning Code in January of 2024?_
 {: .call-out .larger-font .tight-spacing}
 
-**The answer:** We can infer that **25** out of **42** listed Canada Learning Code employees were laid off or otherwise removed from the Our Team page based on the changes to that page that occurred before and after the termination date of January 11, 2024. _This means that a whopping **59.5%** of the entire organization was liquidated 11 days into the New Year._
+**The answer:** We can infer that **25** out of **42** listed Canada Learning Code employees were laid off or otherwise removed from the Our Team page based on the changes to that page that occurred before and after the termination date of January 11, 2024. _This means that a whopping **59.5%** of the entire organization's staff was liquidated 11 days into the New Year._
 {: .call-out .larger-font .tight-spacing}
 
-Could we have determine that simply using a spreadsheet and some rather simple calculations? Definitely[^d3Calc]. Would we have had to write nearly 100 lines of JavaScript to do so? Almost definitely not. Visualizations of data are a powerful tool, though, and this is just a simple example that can be a starting point for more meaningful visualizations.
+Could we have determine that simply using a spreadsheet and some rather simple calculations? _Definitely_[^d3Calc]. Would we have had to write nearly 100 lines of JavaScript to do so? _Almost definitely not_. Visualizations of data are a powerful tool, though, and this is just a simple example that can be a starting point for more meaningful visualizations.
 
 [^d3Calc]: Once we had grouped the data, it's also a fairly straightforward matter of using D3 to perform calculations using the data to figure this out--but _where's the fun in that_?
 
