@@ -49,6 +49,7 @@ This will shorten our code significantly (40+ fewer lines!) and we can imagine o
 This is around the area where the complexity of our code can kind of... _explode_. This is also around the edge of my experience of D3--I've dabbled and created things, but I do have to spend significantly more time figuring things out. I say this because I don't want you learning any bad habits from me. We will be building code that _ostensibly_ works, but it might not necessarily be structured in a way that would be considered a best practice. The most I can hope for is that the experience that I'm detailing here will help you to figure your own issues out or help you to understand D3 a little bit deeper than before.
 
 ## Answering our first question about the Canada Learning Code 2024 layoffs
+{:style="line-height:1.2;"}
 
 With all that out of the way, here's where we're headed:
 
@@ -64,9 +65,11 @@ With all that out of the way, here's where we're headed:
 
 And with that, we can also visualize the answer to the question we posed earlier:
 
-> "_How many people were laid off from Canada Learning Code in January of 2024?_"{: style="font-size:1.5em"}
+> "_How many people were laid off from Canada Learning Code in January of 2024?_"
+{:style="font-size:1.5em;"}
 
-**The answer:** We can infer that **25** out of **42** listed Canada Learning Code employees were laid off or otherwise removed from the Our Team page based on the changes to that page that occurred before and after the termination date of January 11, 2024. This means that a whopping **59.5%** of the entire organization was liquidated 11 days into the New Year.{: style="font-size:1.5em"}
+**The answer:** We can infer that **25** out of **42** listed Canada Learning Code employees were laid off or otherwise removed from the Our Team page based on the changes to that page that occurred before and after the termination date of January 11, 2024. This means that a whopping **59.5%** of the entire organization was liquidated 11 days into the New Year.
+{:style="font-size:1.5em;"}
 
 Could we have determine that simply using a spreadsheet and some rather simple calculations? Definitely[^d3Calc]. Would we have had to write nearly 100 lines of JavaScript to do so? Almost definitely not. Visualizations of data are a powerful tool, though, and this is just a simple example that can be a starting point for more meaningful visualizations.
 
