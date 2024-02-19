@@ -239,4 +239,6 @@ selection.join("path")
 
 Like the function created by `d3.pie()`, the function created by `d3.arc()` needs to be provided data to be able to generate the code for the `<path>` elements. We can specify inner and outer radii by chaining the methods `innerRadius()` and `outerRadius()` onto `d3.arc()` (if the `innerRadius()` is greater than 0, the created `d3.arc()` function will generate a donut shape). When using this function, if we don't explicitly specify what data to use, it will implicitly use the data that has already been bound-- which is actually a good thing in this case since that contains both a `startAngle` and an `endAngle`.
 
+_That might have seemed like a lot of work to come up with a kind of boring visualization and you wouldn't be wrong. Like many coding endeavours, there's more than a little bit of setup to take care of however once that's out of the way, that's when things can really take off! Continue on to the next post, [{{ page.next.title }}]({{ page.next.url }}), where we'll spice up our simple pie chart with some text and colours._ 
+
 ---
