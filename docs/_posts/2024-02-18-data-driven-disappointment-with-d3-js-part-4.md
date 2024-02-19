@@ -26,4 +26,4 @@ _Note: if you're just coming to this series or need a refresher on the story so 
 </div>
 </details>
 
-At the end of [part 3 of this series]({%- post_url 2024-02-04-data-driven-disappointment-with-d3-js-part-3 -%}), we had a functional--_if a little boring_--pie chart, constructed through the use of `d3.pie()` and `d3.arc()`. With it, we can see the relative proportion of how many people were laid off compared to not, but only if we hover over each of the pie slices and read the labels.
+At the end of [part 3 of this series]({%- post_url 2024-02-10-data-driven-disappointment-with-d3-js-part-3 -%}), we had a functional--_if a little boring_--pie chart, constructed through the use of `d3.pie()` and `d3.arc()`. With it, we can see the relative proportion of how many people were laid off compared to not, but only if we hover over each of the pie slices and read the labels.
