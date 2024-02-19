@@ -14,7 +14,7 @@ tags:
 
 In part 4 of this series on using the D3 JavaScript library (d3.js), we will look at how to use `d3.color()` and some of the built-in `d3` color interpolators to specify `fill` colours for our pie slices. We will also be adding a title and labels to help make the data being presented a little clearer.
 
-_Note: if you're just coming to this series or need a refresher on the story so far, why not check out the [first post]({%- post_url 2024-02-01-data-driven-disappointment-with-d3-js-part-1 -%}) or the [previous post (part 3)]({%- post_url 2024-02-04-data-driven-disappointment-with-d3-js-part-3 -%})?_
+_Note: if you're just coming to this series or need a refresher on the story so far, why not check out the [first post]({%- post_url 2024-02-01-data-driven-disappointment-with-d3-js-part-1 -%}) or the [previous post (part 3)]({%- post_url 2024-02-10-data-driven-disappointment-with-d3-js-part-3 -%})?_
 
 {% include d3-js-clc-chart-1.html %}
 
