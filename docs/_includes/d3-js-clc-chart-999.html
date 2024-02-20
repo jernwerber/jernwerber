@@ -5,7 +5,7 @@
   
     const groupedData = d3.group(data, d => d.Hierarchy);
     
-    const svgWidth = 600;
+    const svgWidth = 700;
     const svgHeight = 500;
     
     const outerRadius = 100;
@@ -34,9 +34,8 @@
       .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight])
       .style("background-color", backgroundColor)
       .style("margin-inline","auto")
+      .style("display","block")
     ;
-    
-    const pieData = d3.pie().value(d => d[1].length).startAngle(pieRotate).endAngle(2*Math.PI + pieRotate).sort(null)(groupedData);
     
     d3svg.append("g") 
       .attr("transform",`translate(${shiftX},${shiftY})`)
@@ -106,7 +105,11 @@
           g.append("text")
             .attr("dy",6)
             .attr("text-anchor",(d.endAngle + d.startAngle)/2 < Math.PI ? "start" : "end" )
-            .text(`${CS[d.data[0]]}`)
+            .text(`${CS[d.data[0]]} (${d.value - (d3.group(data, 
+                e => e.Hierarchy, 
+                e => e.LaidOff)
+                .get(d.data[0]+"")
+                .get("FALSE").length)} of ${d.value})`)
             .attr("x", x)
             .attr("y", y)
             .attr("fill","darkslategrey")
@@ -122,6 +125,7 @@
         .attr("text-anchor", "middle")
         .attr("transform",`translate(0 ${ -svgHeight/2.2 + shiftY })`)
         .style("font-size","24")
+        .style("font-family", "Georgia")
         .style("font-weight", "light")
         .style("font-style","italic")
     .selectAll("tspan")
