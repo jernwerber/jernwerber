@@ -1,5 +1,5 @@
 ---
-title: "Data-Driven Disappointment Part 4: Colour and text"
+title: "Data-Driven Disappointment Part 4: Colour and title text"
 
 first_post: 2024-02-01-data-driven-disappointment-with-d3-js-part-1
 previous_post: 2024-02-10-data-driven-disappointment-with-d3-js-part-3
@@ -51,7 +51,7 @@ This is around the area where the complexity of our code can kind of... _explode
 ## Answering our first question about the Canada Learning Code 2024 layoffs
 {: .tight-spacing}
 
-With all that out of the way, here's where we're headed:
+With all that out of the way, here's where we're headed (over this part and the next):
 
 {% include d3-js-clc-chart-2.html %}
 
@@ -124,7 +124,7 @@ Resulting in:
 
 The astute among you will notice that this only lets us pick a single color for every pie slice. _How might we pick different colours for our pie slices, for example, darker versions of a starting colour for each subsequent pie slice?_ D3 has got you covered: the methods chained to the `join()` method (such as `attr()`) are a bit special because they run in the context of each specific datapoint or _datum_. They have access to the current datum as well as the index (position) of it in the datapoint collection. _👈 Keep this in mind._
 
-D3 also provides utilities for working with colours through `d3.color()`, for example, the method `darker()` return a darker shade of a colour, based on an arbitrary input value, i.e., `d3.color("crimson").darker(1)` would produce a shade of `crimson` that is darker by `1` arbitrary unit. Combine this with knowing the index of a datum (_I told you to keep this in mind!_) and we can have a colour get progressively darker in correspondence with its index, for example:
+D3 also provides utilities for working with colours through `d3.color()`, for example, the method `darker()` return a darker shade of a colour, based on an arbitrary input value, i.e., `d3.color("crimson").darker(1)` would produce a shade of `crimson` that is darker by `1` arbitrary unit. Combine this with knowing the _index of a datum_ (that thing I said to keep in mind 👀) and we can have a colour get progressively darker in correspondence with its index, for example:
 
 ```javascript
 d3svg.append("g")
@@ -150,3 +150,64 @@ Which, in practice, looks like:
 ```
 </div>
 </details>
+
+The special sauce is in the arrow function being used for `fill`: 
+
+```javaScript
+(d, i) => d3.color("crimson").darker(i)
+```
+- The first argument, `d`, is as we've seen already--a reference to the datum or current datapoint (or group).
+- The second argument, `i`, is the index. For each subsequent datapoint, this value increases, this means for our first datapoint, we get `d3.color("crimson").darker(0)` and for our second datapoint, `d3.color("crimson").darker(1)`, and so on, if we had more datapoints.
+
+We can think of `darker()` (or its counterpart, `brighter()`) _like_ an interpolator in that it's creating a new colour based on a starting colour. D3 also has true colour interpolators (e.g., `d3.interpolateRgb()`), where a colour is interpolated within a colour range or spectrum, but with only 2 groups (for now), we would end up with both extremes of the spectrum. If you're so inclined, try, for example:
+
+```javascript
+(d, i) => d3.interpolateRgb("white","crimson")(i / (groupedData.size-1))
+```
+
+Yields:
+
+![Pie chart with one white slice and one crimson slice, demonstrating use of the interpolateRgb() method for defining fill colour.](/assets/img/d3-js-red-white-interpolate.png)
+
+## Adding a chart title
+
+Between adding labels and adding a chart title, the chart title is _by far_ the more straightforward operation. Conceptually, it goes as follows:
+
+1. Create a `<text>` element and append it to the `<svg>` element.
+1. Position the `<text>` element using its `transform` and `text-anchor` attributes.
+1. Style the `<text>` element using the `style()` method and CSS properties such as `font-size`.
+1. Use the `text()` method set the `<text>` element's inner text.
+
+Problems arise fairly quickly because of how rudimentary text handling is for SVGs: as far as I've seen, each line of a multiline text block needs to be its own element, so if you have a long title--_and chart titles often are_--, you'll need to break it into multiple elements, such as `<tspans>` inside the `<text>` element. So now the process looks like:
+
+1. Create a `<text>` element and append it to the `<svg>` element.
+1. Position the `<text>` element using its `transform` and `text-anchor` attributes.
+1. Style the `<text>` element using the `style()` method and CSS properties such as `font-size`.
+1. Create a `<tspan>` for each line of text.
+1. Set the `x` and `dy` attributes of each `<tspan>` element so that the lines are positioned properly relative to each other. `x` controls the x-position of the element, while `dy` (delta y) is the offset distance in the y-direction, relative to the starting y-position. 
+1. Use the `text()` method set each `<tspan>` element's inner text.
+
+Labels are even more complicated since neither `<text>` nor `<tspan>` support CSS styling such as `background-color`, meaning that if we want a background behind our label to help with visibility/contrast then we need to draw it ourselves, for example using the `<rect>` element to place a rectangle. We'll see this later. For now, let's turn our attention to the code we need for the title:
+
+```javascript
+d3svg.append("text")
+    .attr("id", "title-text")
+    .attr("text-anchor", "middle")
+    .attr("transform","translate(0 -270)") // instead of -270, you can also use 
+//  .attr("transform",`translate(0 ${ -svgHeight/2 + shiftY })`) where shiftY is a y-offset. Don't forget the backticks for a template string!
+    .style("font-size","20")
+.selectAll("tspan")
+.data(["CLC Layoffs 2024:", "NOT LAID OFF vs LAID OFF"])
+    .join("tspan")
+        .text(d => d)
+        .attr("x", 0)
+        .attr("dy", (d,i) => 24 * i)
+;
+```
+- I'm making use of the same `selectAll-data-join` pattern here that we used for the pie slices.
+- Each line of text for the title is an array element (`["CLC Layoffs 2024:", "NOT LAID OFF vs LAID OFF"]`) that's provided in the `data()` method so that we can use D3's utilities to loop over them and apply/calculate attributes.
+- As children of the `<text>` element, the `<tspan>` elements will inherit the values for `text-anchor`, `transform` and `font-size` so we don't need to repeat them when we add in the `<tspan>` elements.
+- We can assign the inner text of each `<tspan>` using the `text()` method and an arrow function that returns the value of each datum. In this case, that value is a line of text.
+- We see the same arrow function structure, `(d,i) => 24 * i`, we just saw earlier, except the index, `i`, is being used to calculate the y-offset of each line. The first line (`i = 0`) has no offset (i.e., `24 * 0 = 0`), while the second line (`i = 1`) is offset by `24` units since `24 * 1 = 24`.
+
+_Whew! That's a lot to take in, and there's still a bit more depth to cover, as alluded to, for adding labels to the chart. Until next time! (Part 5 in progress, but you can see the code above)_

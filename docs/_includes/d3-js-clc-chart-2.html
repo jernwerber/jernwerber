@@ -73,17 +73,18 @@
       })
     ;
     
-    d3svg.append("g")
-        .attr("id", "title-text")
-        .attr("text-anchor", "middle")
-        .attr("transform",`translate(0 ${ -svgHeight/2 + shiftY })`)
-        .style("font-size","20")     
-    .selectAll("text")
-    .data(["CLC Layoffs 2024:", "NOT LAID OFF vs LAID OFF"])
-        .join("text")
-            .text(d => d)
-            .attr("dy", (d,i) => 24 * i)
-    ;
+    d3svg.append("text")
+      .attr("id", "title-text")
+      .attr("text-anchor", "middle")
+      .attr("transform",`translate(0 ${ -svgHeight/2 + shiftY })`)
+      .style("font-size","20")
+  .selectAll("tspan")
+  .data(["CLC Layoffs 2024:", "NOT LAID OFF vs LAID OFF"])
+      .join("tspan")
+          .text(d => d)
+          .attr("x", 0)
+          .attr("dy", (d,i) => 24 * i)
+  ;
     
     d3.select("#d3-container-2").node()
       .append(d3svg.node())

@@ -1,5 +1,6 @@
 ---
 title: 'jernwerber.dev: words & code'
+list_title: 'Recent posts'
 ---
 
 {% assign about = site.pages | where:"title", "About me: Front page" | first %}
