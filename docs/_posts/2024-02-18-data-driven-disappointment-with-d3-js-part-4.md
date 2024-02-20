@@ -210,4 +210,4 @@ d3svg.append("text")
 - We can assign the inner text of each `<tspan>` using the `text()` method and an arrow function that returns the value of each datum. In this case, that value is a line of text.
 - We see the same arrow function structure, `(d,i) => 24 * i`, we just saw earlier, except the index, `i`, is being used to calculate the y-offset of each line. The first line (`i = 0`) has no offset (i.e., `24 * 0 = 0`), while the second line (`i = 1`) is offset by `24` units since `24 * 1 = 24`.
 
-_Whew! That's a lot to take in, and there's still a bit more depth to cover, as alluded to, for adding labels to the chart. Until next time! (Part 5 in progress, but you can see the code above)_
+_Whew! That's a lot to take in, and there's still a bit more depth to cover, as alluded to, for adding labels to the chart. Until next time! (Part 5 in progress, but you can see the code as part of the example above. You can also continue on to a brief interlude with a more complex product in the next post, [{{ page.next.title }}]({{ page.next.url }}))_
