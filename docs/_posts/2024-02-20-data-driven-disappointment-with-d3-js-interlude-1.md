@@ -12,3 +12,13 @@ title: "Data-Driven Disappointment Interlude 1: Layoffs vs Hierarchy"
 </div>
 </details>
 
+{% include d3-js-clc-chart-998.html %}
+
+<details><summary><em>See the code</em>:</summary>
+<div markdown="1">
+```html
+{% include d3-js-clc-chart-998.html %}
+```
+</div>
+</details>
+

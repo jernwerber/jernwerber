@@ -1,0 +1,161 @@
+<script type="module">
+    import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+  
+    const data = await d3.tsv("https://jernwerber.dev/static/clc-laid-off-2024-01-20.tsv");
+  
+    const groupedData = d3.group(data, d => d.LaidOff);
+    
+    const svgWidth = 700;
+    const svgHeight = 500;
+    
+    const outerRadius = 100;
+    const innerRadius = 50;
+    
+    const shiftX = 0;
+    const shiftY = 40;
+    
+    const baseColor = "crimson";
+    const backgroundColor = "none";
+    
+    const pieGap = 0.04;
+    const pieRotate = 0 * Math.PI;
+    
+    const CS = {
+      HIERARCHY : {
+        0 : "non-managers",
+        1 : "managers",
+        2 : "directors",
+        3 : "C-level",
+        4 : "CEO"
+      }
+    }
+    
+    const d3svg = d3.create("svg")
+        .attr("aria-labelledby","chart-title")
+        .attr("width", svgWidth)
+        .attr("height", svgHeight)
+        .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight])
+        .style("background-color", backgroundColor)
+        .style("margin-inline","auto")
+    ;
+    
+    d3svg.append("text")
+        .attr("id", "chart-title")
+        .attr("text-anchor", "middle")
+        .attr("transform",`translate(0 ${ -svgHeight/2.2 + shiftY })`)
+        .style("font-size","24")
+        .style("font-weight", "light")
+        .style("font-style","italic")
+    .selectAll("tspan")
+    .data(["Canada Learning Code 2024 Layoffs:", "Employees LAID OFF × HIERARCHY"])
+        .join("tspan")
+            .text(d => d)
+            .attr("x", 0)
+            .attr("dy", (d,i) => 28 * i)
+    ;
+    
+    d3svg.append("g") 
+      .attr("transform",`translate(${shiftX},${shiftY})`)
+      .selectAll("path")
+      .data(
+        d3.pie()
+          .value(d => d[1].length)
+          .startAngle(pieRotate)
+          .endAngle(2*Math.PI + pieRotate)
+          .sort(null)(groupedData)
+      )
+      .join("path")
+          .each(function(i,j) {
+              d3svg.append("g")
+                .attr("transform",`translate(${shiftX},${shiftY})`)
+                .selectAll("path")
+                .data(
+                  d3.pie()
+                    .value(i => i[1].length)
+                    .startAngle(i.startAngle + pieGap/2)
+                    .endAngle(i.endAngle - pieGap/2)
+                    .sort((a,b) => i.data[0] === "FALSE" ? d3.ascending(a[0],b[0]) : d3.descending(a[0],b[0]))(d3.group(i.data[1], d => d.Hierarchy))
+                )
+                .join("path")
+                  .each (function (o,p){
+                    const [x,y] = d3.arc().innerRadius(180).outerRadius(180).centroid(o);
+                    d3svg.append("text")
+                      .attr("transform",`translate(${shiftX},${shiftY})`)
+                      .attr("dy",6)
+                      .attr("text-anchor",(o.endAngle + o.startAngle)/2 < Math.PI ? "start" : "end" )
+                      .text(`${i.data[0] === "TRUE" ? "❌" : ""} ${CS.HIERARCHY[o.data[0]]}`)
+                      .attr("x", x)
+                      .attr("y", y)
+                      .style("font-style","italic")
+                      .style("font-family", "Georgia")
+                        .append("tspan")
+                        .text(` ${o.data[1].length}`)
+                        .style("font-weight","bold")
+              })
+                .attr("fill", (k,m) => d3.color(
+                  d3.quantize(
+                    d3.interpolateRgb(d3.color("aqua"),d3.color("aqua").darker(2)),5).reverse()[k.data[0]]
+              )
+                     )
+                .attr("stroke", (k,m) => k.data[0] === "TRUE" ? "none" : "none")  
+                .attr("d", d3.arc().innerRadius(outerRadius + 10).outerRadius(outerRadius + 50))
+            .append("title")
+               .text(d => d.data[1].length)
+         })
+        .attr("fill", (d, i) => d3.quantize(
+                d3.interpolateReds,6
+                ).reverse()[i]
+             )
+        .attr("stroke", "none")
+        .attr("d", d3.arc().innerRadius(50).outerRadius(100))
+        .append("title")
+          .text(d => d.value)
+    ;
+    
+    d3svg.append("g")
+      .attr("transform",`translate(${shiftX},${shiftY})`)
+      .selectAll("g")
+      .data(
+        d3.pie()
+          .value(d => d[1].length)
+          .startAngle(pieRotate)
+          .endAngle(2 * Math.PI + pieRotate)
+          .sort(null)(groupedData)
+      )
+      .join("g")  
+        .each(function (d, i) {
+        const [x,y] = d3.arc().innerRadius(150).outerRadius(180).centroid(d);
+  
+        const g = d3.select(this);
+        const labelWidth = 36;
+        const labelHeight = 24;
+  
+        g.append("rect")
+            .attr("x", x - labelWidth/2)
+            .attr("y", y - labelHeight/2)
+            .attr("width",labelWidth)
+            .attr("height",labelHeight)
+            .attr("fill", "none")
+        ;
+  
+          g.append("text")
+            .attr("dy",6)
+            .attr("text-anchor",(d.endAngle + d.startAngle)/2 < Math.PI ? "start" : "end" )
+            .attr("x", x)
+            .attr("y", y)
+            .attr("fill","darkslategrey")
+            .style("font-weight","light")
+            .style("font-style", "italic")
+            .style("font-family","Georgia")
+        ;  
+      })
+    ;
+      
+    d3.select("#d3-container-998").node()
+      .append(d3svg.node())
+    ;
+    
+  </script>
+  <div id="d3-container-998">
+    <!-- this will hold whatever D3 generates -->
+  </div>
