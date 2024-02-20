@@ -15,9 +15,13 @@ markdown: kramdown
 
 url: "https://jernwerber.dev"
 
+collections:
+  portfolio:
+    output: true
+
 header_pages:
   - page-about.md
-  - page-posts.md
+  - page-posts.html
   - page-portfolio.md
 
 plugins:
