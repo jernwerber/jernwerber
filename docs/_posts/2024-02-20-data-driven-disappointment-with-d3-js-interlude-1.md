@@ -62,7 +62,7 @@ To help us answer these questions, let's take a look at the first chart, below �
 1. **Non-managers--the lowest level of employee--were significantly disproportionately affected by the Canada Learning Code lay offs compared to other hierarchy groups.** Non-managers include
 roles such as `Learning facilitator`, `Data analyst`, and `Learning experience designer` as well as their `Senior` and `Bilingual` variants.
 1. Given the relative safety of manager-level employees, **there are almost certainly people managers who were not laid off who now have greatly reduced (or non-existent) teams.**
-1. Regardless of any sentiments around "leaders eating last", **the safest place to be during these layoffs was in senior leadership or higher (directors and up)**, with only _1 out of 7 (or approx. 14.3%)_ of that group being laid off. Truly inspiring leadership `o7` (saluting emoji 🫡).
+1. Regardless of any sentiments around "leaders eating last", **the safest place to be during these layoffs was in senior leadership or higher (directors and up)**, with only _1 out of 7 (or approx. 14.3%)_ of that group being laid off. Truly inspiring leadership **`o7`** (👈 saluting emoji).
 
 _Hang tight, analysis to be continued!_
 {: .call-out}
