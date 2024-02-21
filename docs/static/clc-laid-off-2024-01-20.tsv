@@ -6,16 +6,16 @@ Director, Partnerships & Program Facilitation	FALSE		2
 Director of Marketing and Communications	FALSE	MARCOM	2
 Director of Finances & Accounting	TRUE	FIN	2
 Director, Programs	FALSE		2
-K-12 Program Manager	TRUE		0
-Adult Program Manager	FALSE		0
+K-12 Program Manager	TRUE		1
+Adult Program Manager	FALSE		1
 Manager, Chapters	FALSE		1
 Senior Manager, Partnerships	FALSE		1
 Senior Manager, Program Facilitation	FALSE		1
-Senior Project Manager	TRUE		0
+Senior Project Manager	TRUE		1
 Sr Manager Evaluation & Impact Measurement	TRUE	EVAL	1
 Senior People and Culture Manager	FALSE	HR	1
 Senior Marketing Manager	FALSE	MARCOM	1
-Instructional Training Manager	FALSE		0
+Instructional Training Manager	FALSE		1
 Senior Fund Development Specialist	TRUE		0
 Sr. Learning Experience Designer	TRUE		0
 Senior Partner Development Lead	TRUE		0
