@@ -1,0 +1,136 @@
+<script type="module">
+    import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+  
+    const data = await d3.tsv("https://jernwerber.dev/static/clc-laid-off-2024-01-20.tsv");
+    
+    const svgWidth = 700;
+    const svgHeight = 500;
+    
+    const outerRadius = 150;
+    const innerRadius = 100;
+    
+    const shiftX = 0;
+    const shiftY = 40;
+    
+    const radiusOffset = 50;
+    
+    const baseColor = "crimson";
+    const backgroundColor = "none";
+    
+    const pieGap = 0.04;
+    const pieRotate = 0.2 * Math.PI;
+    
+    const CS = {
+      HIERARCHY : {
+        0 : "non-managers",
+        1 : "managers",
+        2 : "directors",
+        3 : "C-level",
+        4 : "CEO"
+      },
+     LAIDOFF: {
+       "TRUE" : "Laid off",
+       "FALSE" : "Not laid off"
+     }
+    }
+    
+    const groupedData = d3.group(data, d => d.LaidOff);
+    const d3svg = d3.create("svg")
+        .attr("aria-labelledby","chart-title")
+        .attr("width", svgWidth)
+        .attr("height", svgHeight)
+        .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight])
+        .style("background-color", backgroundColor)
+        .style("margin-inline","auto")
+    ;
+    
+    d3svg.append("text")
+        .attr("id", "chart-title")
+        .attr("text-anchor", "middle")
+        .attr("transform",`translate(0 ${ -svgHeight/2.2 + shiftY })`)
+        .style("font-size","24")
+        .style("font-weight", "light")
+        .style("font-style","italic")
+    .selectAll("tspan")
+    .data(["Canada Learning Code 2024 Layoffs:", "Employees LAID OFF"])
+        .join("tspan")
+            .text(d => d)
+            .attr("x", 0)
+            .attr("dy", (d,i) => 28 * i)
+    ;
+    
+    d3svg.append("g") 
+      .attr("transform",`translate(${shiftX},${shiftY})`)
+      .selectAll("path")
+      .data(
+        d3.pie()
+          .value(d => d[1].length)
+          .startAngle(pieRotate)
+          .endAngle(2*Math.PI + pieRotate)
+          .sort(null)(groupedData)
+      )
+      .join("path")
+         .attr("fill", (d, i) => d3.quantize(
+                d3.interpolateRgb("lightgrey","crimson"),2
+                ).reverse()[i]
+             )
+        .attr("stroke", "none")
+        .attr("d", d3.arc().innerRadius(innerRadius).outerRadius(outerRadius))
+        .append("title")
+          .text(d => d.value)
+    ;
+    
+    d3svg.append("g")
+      .attr("transform",`translate(${shiftX},${shiftY})`)
+      .selectAll("g")
+      .data(
+        d3.pie()
+          .value(d => d[1].length)
+          .startAngle(pieRotate)
+          .endAngle(2 * Math.PI + pieRotate)
+          .sort(null)(groupedData)
+      )
+      .join("g")  
+        .each(function (d, i) {
+        const [x,y] = d3.arc().innerRadius(outerRadius).outerRadius(outerRadius + radiusOffset).centroid(d);
+  
+        const g = d3.select(this);
+        const labelWidth = 36;
+        const labelHeight = 24;
+  
+        g.append("rect")
+            .attr("x", x - labelWidth/2)
+            .attr("y", y - labelHeight/2)
+            .attr("width",labelWidth)
+            .attr("height",labelHeight)
+            .attr("fill", "none")
+        ;
+  
+          g.append("text")
+            .attr("dy",6)
+            .attr("text-anchor",(d.endAngle + d.startAngle)/2 < Math.PI ? "start" : "end" )
+            .text(`${CS.LAIDOFF[d.data[0]]} `)
+            .attr("x", x)
+            .attr("y", y)
+            .attr("fill","darkslategrey")
+            .style("font-weight","light")
+            .style("font-style", "italic")
+            .style("font-family","Georgia")
+              .append("tspan")
+                .style("font-weight", "bold")
+                .style("cursor", "help")
+                .text(`${d.value}`)
+                .append("title")
+                  .text(`${(d.value * 100 / d3.sum(groupedData, d => d[1].length)).toFixed(2)}%`)
+        ;  
+      })
+    ;
+    
+    d3.select("#d3-container-997").node()
+      .append(d3svg.node())
+    ;
+    
+  </script>
+  <div id="d3-container-997">
+    <!-- this will hold whatever D3 generates -->
+  </div>

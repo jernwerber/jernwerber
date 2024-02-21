@@ -5,10 +5,9 @@ first_post: 2024-02-01-data-driven-disappointment-with-d3-js-part-1
 previous_post: 2024-02-10-data-driven-disappointment-with-d3-js-part-3
 
 tags:
-    - D3
     - tutorial
     - JavaScript
-    - "Data driven documents"
+    - "Data driven documents (D3)"
     - d3.js
 ---
 
@@ -209,5 +208,7 @@ d3svg.append("text")
 - As children of the `<text>` element, the `<tspan>` elements will inherit the values for `text-anchor`, `transform` and `font-size` so we don't need to repeat them when we add in the `<tspan>` elements.
 - We can assign the inner text of each `<tspan>` using the `text()` method and an arrow function that returns the value of each datum. In this case, that value is a line of text.
 - We see the same arrow function structure, `(d,i) => 24 * i`, we just saw earlier, except the index, `i`, is being used to calculate the y-offset of each line. The first line (`i = 0`) has no offset (i.e., `24 * 0 = 0`), while the second line (`i = 1`) is offset by `24` units since `24 * 1 = 24`.
+
+---
 
 _Whew! That's a lot to take in, and there's still a bit more depth to cover, as alluded to, for adding labels to the chart. Until next time! (Part 5 in progress, but you can see the code as part of the example above. You can also continue on to a brief interlude with a more complex product in the next post, [{{ page.next.title }}]({{ page.next.url }}))_

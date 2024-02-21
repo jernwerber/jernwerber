@@ -2,6 +2,12 @@
 title: "From the Archives: Logging accelerometer data from the micro:bit"
 excerpt_separator: <!--more-->
 math: true
+tags:
+    - microbit
+    - electronics
+    - microcontroller
+    - Python
+    - accelerometer
 ---
 
 _Another one from the archives, hence the date. I'm republishing this one because it has some interesting information about the micro:bit's accelerometer, though the actual data logging part might be a bit moot given the improvements that have occurred to MakeCode's functionality._
