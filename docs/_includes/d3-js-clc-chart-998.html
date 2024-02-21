@@ -104,7 +104,7 @@
          })
         .attr("fill", (d, i) => d3.quantize(
                 d3.interpolateReds,6
-                ).reverse()[i]
+                ).reverse()[1-i]
              )
         .attr("stroke", "none")
         .attr("d", d3.arc().innerRadius(50).outerRadius(100))
