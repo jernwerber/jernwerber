@@ -37,8 +37,8 @@
     const groupedData = d3.group(data, d => d.LaidOff);
     const d3svg = d3.create("svg")
         .attr("aria-labelledby","chart-title")
-        .attr("width", svgWidth)
-        .attr("height", svgHeight)
+        // .attr("width", svgWidth)
+        // .attr("height", svgHeight)
         .attr("viewBox", [-svgWidth / 2, -svgHeight / 2, svgWidth, svgHeight])
         .style("background-color", backgroundColor)
         .style("margin-inline","auto")
