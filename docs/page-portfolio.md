@@ -15,6 +15,6 @@ _This page is gradually being updated! Check back later! (2024-03-11)_
   </h2>
   {% if p.excerpt %}
   <p>{{ p.excerpt | markdownify }}</p>
-  <a href="{{ p.url }}">Keep Reading <em>{{ p.title }}</em>...</a>
+  <a href="{{ p.url }}">Continue reading <em>{{ p.title }}</em>...</a>
   {% endif %}
 {% endfor %}
