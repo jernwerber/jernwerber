@@ -4,6 +4,10 @@ permalink: /portfolio
 ---
 
 ## Selected works of @jernwerber
+{:.no-toc}
+
+* Table of contents
+{:toc}
 
 _This page is gradually being updated! Check back later! (2024-03-11)_
 
