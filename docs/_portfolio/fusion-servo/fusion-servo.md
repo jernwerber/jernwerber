@@ -14,7 +14,7 @@ tags:
     - electronics
 ---
 
-![Simple single micro:bit servomotor layout drawn in Autodesk Fusion 360.]({{ layout-diagram-1.png | relative_url }}){: style="display:block;max-width:100%;"}
+![Simple single micro:bit servomotor layout drawn in Autodesk Fusion 360.](./layout-diagram-1.png){: style="display:block;max-width:100%;"}
 
 Good diagrams go a long way towards understanding how to set up an activity. For this project, I measured the physical materials/components using a set of digital calipers and modeled them in Autodesk Fusion 360. 
 
