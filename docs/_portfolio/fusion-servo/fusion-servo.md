@@ -1,5 +1,7 @@
 ---
 title: "Micro:bit & Autodesk Fusion 360"
+permalink: /portfolio/fusion-servo
+layout: page
 excerpt_separator: <!--more-->
 tags:
     - microbit
