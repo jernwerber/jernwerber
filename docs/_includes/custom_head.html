@@ -9,3 +9,8 @@ A place for custom scripts, loaded at the end of the <head> tag.
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 {%- endif -%}
+
+{%- if page.p5 -%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+{%- endif -%}
