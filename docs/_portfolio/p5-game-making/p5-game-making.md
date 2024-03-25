@@ -7,7 +7,7 @@ p5: true
 
 <div id="sketch-container" style="padding:10px">
 </div>
-<script src="https://cdn.jsdelivr.net/gh/jernwerber/p5-sketches@latest/p5-game-making/spicy-visitors.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches@latest/p5-game-making/spicy-visitors.js"></script>
 <script defer>
     new p5(s, "sketch-container");
 </script>
