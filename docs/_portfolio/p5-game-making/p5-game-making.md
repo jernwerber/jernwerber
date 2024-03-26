@@ -7,7 +7,7 @@ layout: page
 
 <div id="sketch-container" style="display:grid;grid-template-columns:auto auto;padding:10px">
 </div>
-<script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches/p5-game-making/spicy-visitors.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches@main/p5-game-making/spicy-visitors.js"></script>
 <script>
     (function() { 
         let s = document.createElement("script");
