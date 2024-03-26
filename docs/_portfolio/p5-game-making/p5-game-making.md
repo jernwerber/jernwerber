@@ -5,9 +5,9 @@ layout: page
 # p5: true
 ---
 
-<div id="sketch-container" style="padding:10px">
+<div id="sketch-container" style="display:grid;grid-template-columns:auto auto;padding:10px">
 </div>
-<script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches@latest/p5-game-making/spicy-visitors.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches/p5-game-making/spicy-visitors.js"></script>
 <script>
     (function() { 
         let s = document.createElement("script");
