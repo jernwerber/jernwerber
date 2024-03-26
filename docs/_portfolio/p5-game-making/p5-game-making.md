@@ -19,10 +19,10 @@ layout: page
             // start.setAttribute('defer','defer');
             // document.body.appendChild(start);
             document.getElementById("game-cover").addEventListener('click', () => {
-                document.getElementById("game-cover").remove();
+                document.getElementById("game-cover").parentElement.remove();
                 new p5(s, "sketch-container");
             })
         }
-        document.body.appendChild(s);       
+        document.body.appendChild(sc);       
     })();
 </script>
