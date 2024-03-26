@@ -28,7 +28,18 @@ _Click to activate sketch_ 👇
                 document.getElementById("game-cover").parentElement.remove();
                 new p5(s, "sketch-container");
             })
-        }
+            let sk = document.getElementById("sketch-container");
+            function interceptKeys(e) {
+                if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                    e.preventDefault();
+                    }}
+            sk.addEventListener("focus", () => {
+                window.addEventListener("keydown", interceptKeys, false);
+                sk.addEventListener("blur", ()=> {
+                    window.removeEventListener("keydown", interceptKeys, false)
+                }, false);
+            }, false);
+            }                           
         document.body.appendChild(sc);       
     })();
 </script>
