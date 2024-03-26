@@ -12,11 +12,12 @@ layout: page
     (function() { 
         let s = document.createElement("script");
         s.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js');
-        document.body.appendChild(s);
-
-        let start = document.createElement("script");
-        start.innerHTML = `new p5(s, "sketch-container")`;
-        start.setAttribute('defer','defer');
-        document.body.appendChild(start);
+        s.onload = () => {
+            let start = document.createElement("script");
+            start.innerHTML = `new p5(s, "sketch-container")`;
+            start.setAttribute('defer','defer');
+            document.body.appendChild(start);
+        }
+        document.body.appendChild(s);       
     })();
 </script>
