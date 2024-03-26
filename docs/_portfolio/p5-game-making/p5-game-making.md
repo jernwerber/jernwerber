@@ -8,7 +8,7 @@ layout: page
 <div id="sketch-container" style="padding:10px">
 </div>
 <script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches@latest/p5-game-making/spicy-visitors.js"></script>
-<script defer>
+<script>
     (function() { 
         let s = document.createElement("script");
         s.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js');
