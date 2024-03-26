@@ -11,9 +11,9 @@ layout: page
 <script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches@main/p5-game-making/spicy-visitors.js"></script>
 <script>
     (function() { 
-        let s = document.createElement("script");
-        s.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js');
-        s.onload = () => {
+        let sc = document.createElement("script");
+        sc.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js');
+        sc.onload = () => {
             // let start = document.createElement("script");
             // start.innerHTML = `new p5(s, "sketch-container")`;
             // start.setAttribute('defer','defer');
