@@ -11,7 +11,7 @@ layout: page
 <script defer>
     (function() { 
         let s = document.createElement("script");
-        s.attribute('src','https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js');
+        s.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js');
         document.body.appendChild(s);
     })();
     new p5(s, "sketch-container");
