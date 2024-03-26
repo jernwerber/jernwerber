@@ -7,6 +7,7 @@ excerpt_separator: <!--more-->
 ---
 Game-making is a great way to introduce someone to programming because a lot of easy-to-understand game concepts can be used to provide a structure for learning. Adding each feature naturally decomposes a larger problem into manageable chunks, and with some creative planning, features can be arranged to provide a progression through basic coding concepts.
 <!--more-->
+
 This portfolio entry showcases a demo I created for use with a Javascript- and p5-based learning experience that introduced foundational concepts against a backdrop of game-making. The demo had to be simple enough such that learners could identify the individual components, but complex enough to require the application of multiple coding concepts. 
 
 _Click to activate sketch_ 👇
