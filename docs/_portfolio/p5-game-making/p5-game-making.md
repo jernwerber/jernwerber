@@ -6,7 +6,7 @@ layout: page
 ---
 
 <div id="sketch-container" style="display:grid;grid-template-columns:auto auto;padding:10px" markdown=1>
-    ![Screenshot from a sample game written in JavaScript and p5](/portfolio/p5-game-making/p5-game-making-cover.png){: style="display:block;max-width:100%;"}{#game-cover}
+![Screenshot from a sample game written in JavaScript and p5](/portfolio/p5-game-making/p5-game-making-cover.png){: style="display:block;max-width:100%;"}{#game-cover}
 </div>
 <script src="https://cdn.jsdelivr.net/gh/jernwerber/js-sketches@main/p5-game-making/spicy-visitors.js"></script>
 <script>
