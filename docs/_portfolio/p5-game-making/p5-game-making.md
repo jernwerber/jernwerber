@@ -32,6 +32,7 @@ _Click to activate sketch_ 👇
             function interceptKeys(e) {
                 if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
                     e.preventDefault();
+                    console.log(`keycode ${e.keyCode} intercepted`)
                     }}
             sk.addEventListener("focus", () => {
                 window.addEventListener("keydown", interceptKeys, false);
