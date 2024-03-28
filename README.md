@@ -1,4 +1,10 @@
-### Hi there 👋
+### Come in, and know me better, man! 👋
+
+Instructional designer (technical, coding, STEM) & software developer (Python, web, C#) and occasionally other things.
+
+- Check out my LinkedIn profile: [www.linkedin.com/in/jnthn-wbr](https://www.linkedin.com/in/jnthn-wbr)
+- Visit my blog/portfolio website: [jernwerber.dev](https://jernwerber.dev)
+- Follow me on Twitter: [@jernwerber](https://twitter.com/jernwerber)
 
 <!--
 **jernwerber/jernwerber** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
