@@ -1,5 +1,5 @@
 ---
-title: "Data-Driven Disappointment in Pictures: Layoffs × Hierarchy"
+title: "Data-Driven Disappointment in Pictures: Hierarchy × Layoffs"
 excerpt_separator: <!--more-->
 tags:
     - data visualization
@@ -31,7 +31,7 @@ To get a better handle on what happened, we need to ask more questions.
 
 <!--more-->
 
-## Lay offs by Hierarchy
+## Hierarchy by Laid Off Status
 
 To help us answer these questions, let's take a look at the first chart, below 👇:
 
@@ -64,16 +64,5 @@ roles such as `Learning facilitator`, `Data analyst`, and `Learning experience d
 1. Given the relative safety of manager-level employees, **there are almost certainly people managers who were not laid off who now have greatly reduced (or non-existent) teams.**
 1. **The safest place to be during these layoffs was in senior leadership or higher (directors and up)**, with only _1 out of 7 (or approx. 14.3%)_ of that group being laid off.
 
-_Hang tight, analysis to be continued!_
-{: .call-out}
-
-{% include d3-js-clc-chart-998.html %}
-
-<details><summary><em>See the code</em>:</summary>
-<div markdown="1">
-```html
-{% include d3-js-clc-chart-998.html %}
-```
-</div>
-</details>
+_In the next post, I'll split the data by LAID OFF status first and then by HIERARHCY to present this data another way: [{{ page.next.title }}]({{ page.next.url }})_
 
