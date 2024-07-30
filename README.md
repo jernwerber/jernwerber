@@ -1,4 +1,4 @@
-### Come in, and know me better, man! 👋
+### Come in, and know me better! 👋
 
 Instructional designer (technical, coding, STEM) & software developer (Python, web, C#) and occasionally other things.
 
