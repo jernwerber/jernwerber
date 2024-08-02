@@ -35,6 +35,7 @@ In my spare time (and sometimes as part of work), I tinker with electronics. Whi
 - **Educational technology:** Micro:bit · Ozobot · Makey Makey · Lego Mindstorms
 - **Research:** IBM SPSS
 - **Miscellaneous:** Wood-working · Soldering · Basic circuit layout · MIG welding (beginner)
+
 <!--
 Previous to that, I worked on contract for Canada's largest STEM education outreach non-profit, **Actua**, serving as their coding education specialist and working with topics such as **artificial intelligence** and **machine learning**; **digital agriculture**; **internet safety** and **cryptography**.
 
