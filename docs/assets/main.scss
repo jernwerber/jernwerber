@@ -31,6 +31,7 @@ a:hover {
 
 a:hover .animate-bounce-right {
     --bounce-distance: .5em;
+    display: inline-block;
     animation: 1s ease-in-out infinite alternate bounce-right;
 }
 
