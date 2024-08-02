@@ -14,6 +14,8 @@ I've seen this erroneous phrase used more than a few times and I feel strongly e
 
 I'll allow that it can be a bit confusing since you might deposit (the verb) the money for a down payment somewhere. But the two concepts contained within the phrase aren't even all that related to each other.
 
+<!--more-->
+
 ## What's a deposit?
 
 Let's start with **deposits** since they're more broadly applicable. A **deposit** (the noun) in the context of a purchase is money you commit to show that you're serious about following through on a purchase or deal. It is putting your money where your mouth is and this money may or may not be refundable if you choose not to follow through with the purchase or deal. In the case of a real estate purchase, the buyer provides a deposit to the seller once the seller has accepted the buyer's offer to make it more difficult (or, at any rate, more expensive) for the buyer to back out of the deal. The deposit is not _extra_ money that the buyer is paying to the seller, it is just money that the buyer is committing/providing in advance.
