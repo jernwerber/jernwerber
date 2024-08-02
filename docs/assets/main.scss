@@ -30,9 +30,10 @@ a:hover {
 }
 
 a:hover .animate-bounce-right {
-    --bounce-distance: .5em;
+    --bounce-distance: .3em;
+    --bounce-speed: .3s;
     display: inline-block;
-    animation: 1s ease-in-out infinite alternate bounce-right;
+    animation: var(--bounce-speed) ease-in-out infinite alternate bounce-right;
 }
 
 @keyframes bounce-right {
