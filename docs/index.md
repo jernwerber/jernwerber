@@ -13,17 +13,16 @@ list_title: 'Recent posts'
 ## About me _⚡️LIGHTNING ROUND EDITION⚡️_
 
 ### Coding
-- **Front end:** JavaScript · HTML5 · CSS3 · Markdown · Liquid
-- **Back end:** Python (with Django) · C# · SQL · Java & PHP (_a little bit out of date_ 🤏)
-- **Other ends (middle end?)**: MicroPython (with micro:bit) · C (with/for Arduino) · MakeCode (Arcade and micro:bit) · Processing for JavaScript (p5) · GitHub
+- JavaScript · HTML5 · CSS3 · Markdown · Liquid ·  Python (with Django) · C# · SQL · Java & PHP
+
+### Instructional design
+- Adult learning · K-12 learning · Instructor-led training · Self-directed learning · Technical training · Professional development · Adobe Captivate · Articulate Storyline & Rise
 
 ### Other skills
-- **Digital productivity:** Microsoft Office (Word, Excel, Forms, Access & PowerPoint) · Google Workspace (Docs, Sheets, Slides, Forms, Sites)
-- **Instructional design:** Adult learning · Technical training · Professional development · Adobe Captivate · Articulate Storyline & Rise
+- **Digital productivity suites** Microsoft Office · Google Workspace
 - **Live streaming / broadcasting:** OBS Studio · Zoom · Google Meet 
-- **Graphic design and digital video production:** Adobe Photoshop, Illustrator, Premiere & After Effects · Canva
-- **Print layout:** Adobe InDesign (multipage documents, mass publications, marketing & event materials, large format posters)
-- **3D & 3D design and fabrication:** Autodesk Fusion 360 CAD · FDM/FFF 3D printing · LightBurn · Laser cutting
+- **Design:** Graphic design · Print layout · Digital video production
+- **3D design and fabrication:** Autodesk Fusion 360 CAD · FDM/FFF 3D printing · LightBurn · Laser cutting
 - **Educational technology:** Micro:bit · Ozobot · Makey Makey · Lego Mindstorms
 - **Research:** IBM SPSS
 - **Miscellaneous:** Wood-working · Soldering · Basic circuit layout · MIG welding (beginner)

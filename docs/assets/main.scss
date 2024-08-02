@@ -36,6 +36,15 @@ a:hover .animate-bounce-right {
     animation: var(--bounce-speed) ease-in-out infinite alternate bounce-right;
 }
 
+.home-sidebar {
+    width: 35%;
+    float: right;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1em;
+    margin-left: 1em;
+}
+
 @keyframes bounce-right {
     from {
       transform: translateX(0);

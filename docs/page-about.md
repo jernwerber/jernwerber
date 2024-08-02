@@ -15,6 +15,26 @@ In my spare time (and sometimes as part of work), I tinker with electronics. Whi
 
 **If you want to learn more about me--for example, if my experience & expertise could be of interest to your organization-- browse through some of my featured work (_coming soon_) or blog posts, or check me out on [LinkedIn](https://www.linkedin.com/in/jnthn-wbr) or [Twitter/X](https://www.twitter.com/jernwerber)!**
 
+## What I can do
+
+### Coding
+- **Front end:** JavaScript · HTML5 · CSS3 · Markdown · Liquid
+- **Back end:** Python (with Django) · C# · SQL · Java & PHP (_a little bit out of date_ 🤏)
+- **Other ends (middle end?)**: MicroPython (with micro:bit) · C (with/for Arduino) · MakeCode (Arcade and micro:bit) · Processing for JavaScript (p5) · GitHub
+
+### Instructional design
+- **Educational content development:** Adult learning · K-12 learning · Technical training & professional development · Instructor-led training · Self-directed learning 
+- **Content authoring tools:** Adobe Captivate · Articulate Storyline & Rise
+
+### Other skills
+- **Digital productivity:** Microsoft Office (Word, Excel, Forms, Access & PowerPoint) · Google Workspace (Docs, Sheets, Slides, Forms, Sites)
+- **Live streaming / broadcasting:** OBS Studio · Zoom · Google Meet 
+- **Graphic design and digital video production:** Adobe Photoshop, Illustrator, Premiere & After Effects · Canva
+- **Print layout:** Adobe InDesign (multipage documents, mass publications, marketing & event materials, large format posters)
+- **3D & 3D design and fabrication:** Autodesk Fusion 360 CAD · FDM/FFF 3D printing · LightBurn · Laser cutting
+- **Educational technology:** Micro:bit · Ozobot · Makey Makey · Lego Mindstorms
+- **Research:** IBM SPSS
+- **Miscellaneous:** Wood-working · Soldering · Basic circuit layout · MIG welding (beginner)
 <!--
 Previous to that, I worked on contract for Canada's largest STEM education outreach non-profit, **Actua**, serving as their coding education specialist and working with topics such as **artificial intelligence** and **machine learning**; **digital agriculture**; **internet safety** and **cryptography**.
 
