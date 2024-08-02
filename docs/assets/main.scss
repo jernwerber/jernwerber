@@ -28,3 +28,16 @@ p.call-out {
 a:hover {
     text-decoration-style:wavy;
 }
+
+.animate-bounce-right {
+    animation: 1s ease-in-out infinite alternate bounce-right;
+}
+
+@keyframes bounce-right {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(1em);
+    }
