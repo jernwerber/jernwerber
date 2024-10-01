@@ -8,8 +8,6 @@ list_title: 'Recent posts'
 {{ about.content }}
 {% endif %}
 
-{% # <!-- **Hi! 👋 My name is [Jonathan]({% link page-about.md %}){:style="text-decoration:underline wavy;"} and this is my little corner of the Internet. Please take your shoes off at the door.**{: style="font-size:1.5em;"} --> %}
-
 ## About me _⚡️LIGHTNING ROUND EDITION⚡️_
 
 ### Coding
