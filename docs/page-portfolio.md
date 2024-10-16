@@ -35,13 +35,15 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 </style>
 <div class="grid-container">
-{% if p.portfolio_cards %}
+{% for port in site.portfolio %}
+{% if port.portfolio_cards %}
   {% for p in portfolio_cards %}
   <div class="portfolio-card {{ p.card_mod }}">
     <img src="{{ p.card_uri }}">
   </div>
   {% endfor %}
 {% endif %}
+{% endfor%}
 </div>
 
 <!--
