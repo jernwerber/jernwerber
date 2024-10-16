@@ -9,7 +9,6 @@ _This page is gradually being updated! Check back later! (Last updated: 2024-03-
 
 Below are some projects that I've worked on. I have also prepared a package of [Instructional Design Work Samples (PDF, 6.4 MB, Dropbox Link)](https://www.dropbox.com/scl/fi/qdh6dztzyx37z6eql0f2e/Jonathan-Weber-Instructional-Design-Samples.pdf?rlkey=ycc9p50mypo042xw9jagcjqg1&st=m0axm2bl&dl=0) that you can peruse!
 
-{% for p in site.portfolio %}
 <style>
 .grid-container {
   /* max-width:960px; */
@@ -36,17 +35,17 @@ Below are some projects that I've worked on. I have also prepared a package of [
 </style>
 <div class="grid-container">
 {% for port in site.portfolio %}
-{% if port.portfolio_cards %}
-  {% for p in port.portfolio_cards %}
-  <div class="portfolio-card {{ p.card_mod }}">
-    <img src="{{ p.card_uri }}">
-  </div>
-  {% endfor %}
-{% endif %}
+  {% if port.portfolio_cards %}
+    {% for p in port.portfolio_cards %}
+    <div class="portfolio-card {{ p.card_mod }}">
+      <img src="{{ p.card_uri }}">
+    </div>
+    {% endfor %}
+  {% endif %}
 {% endfor %}
 </div>
 
-<!--
+{% comment %}
 {% for p in site.portfolio %}
   <h2>
     <a href="{{ p.url }}">
@@ -58,5 +57,5 @@ Below are some projects that I've worked on. I have also prepared a package of [
   <a href="{{ p.url }}">Continue reading <em>{{ p.title }}</em>...</a>
   {% endif %}
 {% endfor %}
--->
+{% endcomment %}
 
