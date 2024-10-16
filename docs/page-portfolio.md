@@ -11,13 +11,14 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 <style>
 
-@property --portfolio-columns {
+/* @property --portfolio-columns {
   syntax: "<integer>";
   initial-value: 6;
-}
+} */
 
 .grid-container {
   /* max-width:960px; */
+  --portfolio-columns: 6;
   display: grid;
   grid-auto-flow: row dense;
   gap: .5em;
