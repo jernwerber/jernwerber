@@ -28,6 +28,10 @@ Below are some projects that I've worked on. I have also prepared a package of [
 }
 
 
+.portfolio-card-group {
+  display:grid;
+}
+
 .portfolio-card {
   box-shadow:0 0 10px 2px darkgray;
 }
@@ -65,9 +69,11 @@ Below are some projects that I've worked on. I have also prepared a package of [
 {% for port in site.portfolio %}
   {% if port.portfolio_settings %}
     {% if port.portfolio_settings.is_group %}
-      <div class="portfolio-card {{ port.portfolio_settings.group_class }} portfolio-card-group">
+      <div class="portfolio-card {{ port.portfolio_settings.group_class }} portfolio-card-group"
+        style="{{ port.portfolio_settings.group_style }}"
+        >
       {% for p in port.portfolio_cards %}
-        <div class="portfolio-card-group-card">
+        <div class="portfolio-card-group-card {{ p.card_mod }}">
           <img src="{{ p.card_uri }}">
         </div>
       {% endfor %}
