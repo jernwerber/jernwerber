@@ -16,7 +16,7 @@ portfolio_cards:
     -   card_uri: /portfolio/digital-ag/digital-ag-cover.png
         card_mod: wide
     -   card_uri: /portfolio/digital-ag/agtech-framework-standalone.png
-        card_mod: wide tall
+        card_mod: wide
 ---
 
 ![Sample two-page spread from a document laid out using Adobe InDesign depicting an image of a proejct's framework and structured and stylized text.](/portfolio/digital-ag/AgTech-p2.png){: style="display:block;max-width:100%;"}

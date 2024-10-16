@@ -14,10 +14,15 @@ Below are some projects that I've worked on. I have also prepared a package of [
   /* max-width:960px; */
   display: grid;
   grid-auto-flow: row dense;
-  gap: 10px;
+  gap: 1em;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 250px;
+  grid-auto-rows: min-content;
   /* transition:300ms; */
+}
+
+
+.portfolio-card {
+  box-shadow:0 0 10px 2px darkgray;
 }
 
 .portfolio-card.subwide {
@@ -29,7 +34,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
 }
 
 .portfolio-card.superwide {
-  grid-column: span: 4;
+  grid-column: span 4;
 }
 
 .portfolio-card.ultrawide {
