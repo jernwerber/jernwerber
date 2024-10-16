@@ -72,7 +72,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
       {% endfor %}
       </div>
     {% endif %}
-  {% elseif port.portfolio_cards %}
+  {% else if port.portfolio_cards %}
     {% for p in port.portfolio_cards %}
     <div class="portfolio-card {{ p.card_mod }}">
       <img src="{{ p.card_uri }}">
