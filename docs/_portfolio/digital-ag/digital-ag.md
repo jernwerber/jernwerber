@@ -13,7 +13,7 @@ tags:
     - layout
 
 card_uri: /portfolio/digital-ag/AgTech-p2.png
-card_style: wide
+card_mod: wide
 ---
 
 ![Sample two-page spread from a document laid out using Adobe InDesign depicting an image of a proejct's framework and structured and stylized text.](/portfolio/digital-ag/AgTech-p2.png){: style="display:block;max-width:100%;"}
