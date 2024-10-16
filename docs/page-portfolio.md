@@ -15,21 +15,33 @@ Below are some projects that I've worked on. I have also prepared a package of [
   display: grid;
   grid-auto-flow: row dense;
   gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: 250px;
   /* transition:300ms; */
 }
 
-.portfolio-card.wide {
+.portfolio-card.subwide {
   grid-column: span 2;
 }
 
-.portfolio-card.ultrawide {
+.portfolio-card.wide {
   grid-column: span 3;
+}
+
+.portfolio-card.superwide {
+  grid-column: span: 4;
+}
+
+.portfolio-card.ultrawide {
+  grid-column: span 6;
 }
 
 .portfolio-card.tall {
  grid-row: span 2;
+}
+
+.portfolio-card.taller {
+ grid-row: span 3;
 }
 
 </style>
