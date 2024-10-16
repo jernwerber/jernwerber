@@ -1,6 +1,7 @@
 ---
 title: "Digital Agriculture & Adobe InDesign"
 permalink: /portfolio/digital-ag
+cover_uri: /portfolio/digital-ag/AgTech-p2.png
 layout: page
 excerpt_separator: <!--more-->
 tags:
