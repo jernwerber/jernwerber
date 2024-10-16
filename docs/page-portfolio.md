@@ -35,14 +35,16 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 </style>
 <div class="grid-container">
-{% if p.card_uri %}
+{% if p.portfolio_cards %}
+  {% for p in portfolio_cards %}
   <div class="portfolio-card {{ p.card_mod }}">
     <img src="{{ p.card_uri }}">
   </div>
+  {% endfor %}
 {% endif %}
 </div>
-{% endfor %}
 
+<!--
 {% for p in site.portfolio %}
   <h2>
     <a href="{{ p.url }}">
@@ -54,4 +56,5 @@ Below are some projects that I've worked on. I have also prepared a package of [
   <a href="{{ p.url }}">Continue reading <em>{{ p.title }}</em>...</a>
   {% endif %}
 {% endfor %}
+-->
 
