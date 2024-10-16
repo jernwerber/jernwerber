@@ -14,7 +14,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
   /* max-width:960px; */
   display: grid;
   grid-auto-flow: row dense;
-  gap: 1em;
+  gap: .5em;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: min-content;
   /* transition:300ms; */
