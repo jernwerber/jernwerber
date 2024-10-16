@@ -37,7 +37,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
 <div class="grid-container">
 {% if p.card_uri %}
   <div class="portfolio-card {{ p.card_mod }}">
-    <img src="{{ p.cover_uri }}">
+    <img src="{{ p.card_uri }}">
   </div>
 {% endif %}
 </div>
