@@ -43,7 +43,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
   </div>
   {% endfor %}
 {% endif %}
-{% endfor%}
+{% endfor %}
 </div>
 
 <!--
