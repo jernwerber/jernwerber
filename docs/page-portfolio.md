@@ -16,7 +16,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
   display: grid;
   grid-auto-flow: row dense;
   gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 250px;
   /* transition:300ms; */
 }
@@ -35,8 +35,11 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 </style>
 <div class="grid-container">
-{% if p.cover_uri %}
-  <div class="portfolio-card">
+{% if p.card_uri %}
+  <div class="portfolio-card 
+  {% if p.card_mod %}
+    {{ p.card_mod }} 
+  {% endif %}">
     <img src="{{ p.cover_uri }}">
   </div>
 {% endif %}
