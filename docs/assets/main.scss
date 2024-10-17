@@ -1,6 +1,15 @@
 ---
 ---
-// @import "{{ site.theme }}";
+@import "{{ site.theme }}";
+
+body {
+    background:linear-gradient(#272323, #534848);
+    color:#FFF;
+}
+
+a:link {
+    color:limegreen;
+}
 
 hr {
     margin-bottom:1em;

@@ -1,17 +1,13 @@
-#theme: minima
+theme: minima
 
-remote_theme: jekyll/minima
-minima:
-  skin: dark
-
-title: "jernwerber.dev: words, data & code"
+title: "jernwerber.dev"
 author: "Jonathan Weber"
 
 description: >
-  Selected works of Jonathan Weber (@jernwerber), maker, tinkerer software 
-  developer, educational researcher and instructional designer, specializing 
-  in coding & science, technology, engineering, and mathematics (STEM) skills 
-  development.
+  Jonathan Weber (@jernwerber): software developer, 
+  educational researcher, and instructional designer 
+  (coding & science, technology, engineering, and mathematics (STEM) skills 
+  development).
 
 markdown: kramdown
 
