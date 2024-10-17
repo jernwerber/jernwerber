@@ -17,7 +17,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
 } */
 
 .grid-container {
-  /* max-width:960px; 
+  max-width:960px; 
   --portfolio-columns: 6;
   display: grid;
   grid-auto-flow: row dense;
@@ -27,9 +27,9 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
   /* transition:300ms; */
 
-  display:flex;
+  /* display:flex;
   flex-direction:row;
-  flex-wrap:wrap;
+  flex-wrap:wrap; */
 }
 
 
@@ -40,10 +40,10 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 .portfolio-card {
   /* box-shadow:0 0 10px 2px darkgray; */
-  flex:1;
+  /* flex:1; */
 }
 
-/* .portfolio-card.subwide {
+.portfolio-card.subwide {
   grid-column: span 2;
 }
 
@@ -69,7 +69,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 .portfolio-card.taller {
  grid-row: span 3;
-} */
+}
 
 </style>
 <div class="grid-container">
