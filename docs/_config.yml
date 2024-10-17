@@ -1,4 +1,9 @@
-theme: minima
+#theme: minima
+
+remote_theme: jekyll/minima
+minima:
+  skin: dark
+
 title: "jernwerber.dev: words, data & code"
 author: "Jonathan Weber"
 
