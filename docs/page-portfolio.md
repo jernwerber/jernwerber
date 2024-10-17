@@ -3,9 +3,9 @@ title: Portfolio
 permalink: /portfolio
 ---
 
-## Selected works of @jernwerber
+## Selected works
 
-_This page is gradually being updated! Check back later! (Last updated: 2024-03-17)_
+_This page is gradually being updated! Check back later! (Last updated: 2024-10-17)_
 
 Below are some projects that I've worked on. I have also prepared a package of [Instructional Design Work Samples (PDF, 6.4 MB, Dropbox Link)](https://www.dropbox.com/scl/fi/qdh6dztzyx37z6eql0f2e/Jonathan-Weber-Instructional-Design-Samples.pdf?rlkey=ycc9p50mypo042xw9jagcjqg1&st=m0axm2bl&dl=0) that you can peruse!
 
@@ -17,7 +17,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
 } */
 
 .grid-container {
-  /* max-width:960px; */
+  /* max-width:960px; 
   --portfolio-columns: 6;
   display: grid;
   grid-auto-flow: row dense;
@@ -26,6 +26,10 @@ Below are some projects that I've worked on. I have also prepared a package of [
   grid-auto-rows: min-content;
 
   /* transition:300ms; */
+
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
 }
 
 
@@ -35,10 +39,11 @@ Below are some projects that I've worked on. I have also prepared a package of [
 }
 
 .portfolio-card {
-  box-shadow:0 0 10px 2px darkgray;
+  /* box-shadow:0 0 10px 2px darkgray; */
+  flex:1;
 }
 
-.portfolio-card.subwide {
+/* .portfolio-card.subwide {
   grid-column: span 2;
 }
 
@@ -64,7 +69,7 @@ Below are some projects that I've worked on. I have also prepared a package of [
 
 .portfolio-card.taller {
  grid-row: span 3;
-}
+} */
 
 </style>
 <div class="grid-container">

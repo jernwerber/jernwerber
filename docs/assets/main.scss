@@ -7,11 +7,15 @@ body {
     color:#FFF;
 }
 
+.site-header {
+    border-bottom:none;
+}
+
 a:link {
-    color:#32cd32;
+    color:cyan;
 }
 a:visited {
-    color:#259425;
+    color:darkgoldenrod;
 }
 a:hover, .site-nav .page-link, .site-title, .site-title:visited {
     color:gold;
