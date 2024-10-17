@@ -24,12 +24,15 @@ Below are some projects that I've worked on. I have also prepared a package of [
   gap: .5em;
   grid-template-columns: repeat(var(--portfolio-columns), 1fr);
   grid-auto-rows: min-content;
+  align-items: start;
+
   /* transition:300ms; */
 }
 
 
 .portfolio-card-group {
   display:grid;
+  gap:.25em;
 }
 
 .portfolio-card {
