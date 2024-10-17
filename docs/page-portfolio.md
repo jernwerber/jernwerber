@@ -24,6 +24,11 @@ Below are some projects that I've worked on. I have also prepared a package of [
   gap: .5em;
   grid-template-columns: repeat(var(--portfolio-columns), 1fr);
   grid-auto-rows: min-content;
+   
+  /* from https://www.magicpattern.design/ */
+  background-color: #272323;
+  opacity: 0.9;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #272323 11px ), repeating-linear-gradient( #53484855, #534848 );
 
   /* transition:300ms; */
 
