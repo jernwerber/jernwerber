@@ -8,7 +8,13 @@ body {
 }
 
 a:link {
-    color:limegreen;
+    color:#32cd32;
+}
+a:visited {
+    color:#259425;
+}
+a:hover, .site-nav .page-link, .site-title, .site-title:visited {
+    color:gold;
 }
 
 hr {
